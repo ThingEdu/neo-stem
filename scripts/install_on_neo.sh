@@ -22,7 +22,7 @@ DESKTOP_FILE="$HOME/.local/share/applications/neo-stem.desktop"
 ICON_DIR="$HOME/.local/share/icons/hicolor/128x128/apps"
 ICON_FILE="$ICON_DIR/neo-stem.png"
 PYPI_PACKAGE="neo-stem"
-GITHUB_REPO="https://github.com/MEO-3/neo-stem.git"
+GITHUB_REPO="https://github.com/ThingEdu/neo-stem.git"
 
 # -- Parse arguments -----------------------------------------------------------
 SKIP_DESKTOP=false
