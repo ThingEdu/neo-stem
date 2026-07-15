@@ -1,0 +1,41 @@
+Source: neo-stem
+Section: education
+Priority: optional
+Maintainer: Maker Việt <everwellmax@gmail.com>
+Build-Depends: debhelper-compat (= 13),
+ dh-python,
+ python3-all,
+ python3-setuptools,
+ pybuild-plugin-pyproject
+Standards-Version: 4.6.2
+Homepage: https://github.com/ThingEdu/neo-stem
+Rules-Requires-Root: no
+
+Package: neo-stem
+Architecture: all
+Depends: ${misc:Depends},
+ ${python3:Depends},
+ python3-pyqt6,
+ python3-pyqt6.qtquick,
+ python3-pyqt6.qtqml,
+ qt6-qpa-plugins,
+ qml6-module-qtquick,
+ qml6-module-qtquick-controls,
+ qml6-module-qtquick-layouts,
+ qml6-module-qtquick-window,
+ qml6-module-qtquick-templates,
+ qml6-module-qtqml-workerscript,
+ qml6-module-qtmultimedia,
+ gstreamer1.0-plugins-base,
+ gstreamer1.0-plugins-good,
+ gstreamer1.0-libav
+Recommends: qt6-wayland
+Description: Interactive STEM education for Vietnamese pupils (NEO One)
+ NEO STEM is an open-source interactive STEM education application for
+ Vietnamese pupils (grades 3-9), built for the NEO One education device
+ (ARM64/Armbian) and standard Linux desktops.
+ .
+ The app is a PyQt6 + QML front end with a Python backend that tracks
+ progress and badges in a local SQLite database. PyQt6, the Qt6 QML
+ runtime (QtQuick, QtQuick.Controls, QtMultimedia) and the GStreamer
+ media plugins are pulled from apt (never built via pip).

@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME = neo_stem
+export PYBUILD_DESTDIR = debian/neo-stem
+# Tests need PyQt6 + a display; run them separately, not during package build.
+export PYBUILD_DISABLE = test
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild

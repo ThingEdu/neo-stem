@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=NEO STEM
+GenericName=STEM Education
+Comment=Interactive STEM activities for pupils on NEO One
+Exec=neo-stem
+Icon=applications-science
+Terminal=false
+Categories=Education;Science;
+Keywords=stem;education;science;vietnam;neo;children;
+StartupNotify=true

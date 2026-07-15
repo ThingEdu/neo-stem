@@ -1,0 +1,9 @@
+neo-stem (1.0.3) unstable; urgency=medium
+
+  * Initial Debian packaging.
+  * Architecture-independent package; PyQt6 and the Qt6 QML runtime
+    (QtQuick, QtQuick.Controls, QtMultimedia) are pulled from apt, never
+    built via pip, matching the ARM install strategy of
+    scripts/install_on_neo.sh.
+
+ -- Maker Việt <everwellmax@gmail.com>  Thu, 16 Jul 2026 12:00:00 +0700
