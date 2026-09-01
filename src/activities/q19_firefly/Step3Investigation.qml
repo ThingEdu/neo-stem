@@ -4,7 +4,7 @@ import NEO_STEM
 
 InvestigationBase {
     title: qsTr("Thí nghiệm: So sánh nguồn sáng")
-    instructions: qsTr("So sánh 3 nguồn sáng: bóng đèn sợi đốt (nóng, 10% hiệu suất), que phát sáng (mát, hóa học), và đom đóm (mát, sinh học). Điều chỉnh năng lượng đầu vào và quan sát tỷ lệ ánh sáng so với nhiệt tỏa ra.")
+    instructions: qsTr("So sánh 3 nguồn sáng: bóng đèn sợi đốt, que phát sáng (hóa học) và đom đóm (sinh học). Chú ý cột NHIỆT TỎA RA — đó mới là khác biệt lớn nhất giữa chúng.")
     requiredDataPoints: 3
     dataHeaders: [qsTr("Nguồn sáng"), qsTr("Năng lượng vào"), qsTr("% Sáng"), qsTr("% Nhiệt")]
 
@@ -12,12 +12,17 @@ InvestigationBase {
     property real energyInput: 50  // 0-100
 
     // Efficiency calculations per source
-    property real lightPercent: lightSource === 0 ? energyInput * 0.10 :
-                                (lightSource === 1 ? energyInput * 0.25 :
-                                 energyInput * 0.95)
-    property real heatPercent: lightSource === 0 ? energyInput * 0.90 :
-                               (lightSource === 1 ? energyInput * 0.10 :
-                                energyInput * 0.02)
+    // Tỉ lệ năng lượng thành ÁNH SÁNG (hiệu suất đo được thật):
+    //   bóng sợi đốt ~5%  ·  que phát sáng ~15%  ·  đom đóm ~40% (hiệu suất lượng tử đo lại năm 2008)
+    // Tỉ lệ năng lượng thoát ra thành NHIỆT — đây mới là điểm khác biệt lớn nhất:
+    //   bóng sợi đốt ~95%  ·  que phát sáng ~5%  ·  đom đóm ~1%
+    // Phần còn lại ở hai nguồn hóa học/sinh học nằm trong SẢN PHẨM HÓA HỌC, không thoát ra thành nhiệt.
+    property real lightPercent: lightSource === 0 ? energyInput * 0.05 :
+                                (lightSource === 1 ? energyInput * 0.15 :
+                                 energyInput * 0.40)
+    property real heatPercent: lightSource === 0 ? energyInput * 0.95 :
+                               (lightSource === 1 ? energyInput * 0.05 :
+                                energyInput * 0.01)
 
     experimentArea: [
         Item {
@@ -100,7 +105,7 @@ InvestigationBase {
 
                         Rectangle {
                             width: 24
-                            height: lightSource === 0 ? (energyInput * 0.10 / 100) * 50 : 5
+                            height: lightSource === 0 ? (energyInput * 0.05 / 100) * 50 : 5
                             color: "#FFD600"; radius: 2
                             anchors.horizontalCenter: parent.horizontalCenter
 
@@ -146,7 +151,7 @@ InvestigationBase {
 
                         Rectangle {
                             width: 24
-                            height: lightSource === 1 ? (energyInput * 0.25 / 100) * 50 : 5
+                            height: lightSource === 1 ? (energyInput * 0.15 / 100) * 50 : 5
                             color: "#76FF03"; radius: 2
                             anchors.horizontalCenter: parent.horizontalCenter
 
@@ -196,7 +201,7 @@ InvestigationBase {
 
                         Rectangle {
                             width: 24
-                            height: lightSource === 2 ? (energyInput * 0.95 / 100) * 50 : 5
+                            height: lightSource === 2 ? (energyInput * 0.40 / 100) * 50 : 5
                             color: "#CCFF00"; radius: 2
                             anchors.horizontalCenter: parent.horizontalCenter
 
@@ -222,7 +227,7 @@ InvestigationBase {
 
                 Text {
                     id: effText; anchors.centerIn: parent
-                    text: qsTr("Hiệu suất sáng: %1%").arg(Math.round(lightPercent))
+                    text: qsTr("Thành ánh sáng: %1%").arg(Math.round(lightPercent))
                     font.pixelSize: NeoConstants.fontCaption; font.bold: true; color: "white"
                 }
             }
@@ -248,8 +253,8 @@ InvestigationBase {
                 anchors.bottom: parent.bottom; anchors.bottomMargin: 8
                 anchors.horizontalCenter: parent.horizontalCenter
                 text: lightSource === 0 ? qsTr("Bóng đèn sợi đốt: nhiều nhiệt, ít sáng") :
-                      (lightSource === 1 ? qsTr("Que phát sáng: hóa học, mát, hiệu suất vừa") :
-                       qsTr("Đom đóm: sinh học, gần 100% sáng, không nhiệt"))
+                      (lightSource === 1 ? qsTr("Que phát sáng: hóa học, mát, ~15% thành ánh sáng") :
+                       qsTr("Đom đóm: sinh học, ~40% thành ánh sáng, gần như không tỏa nhiệt"))
                 font.pixelSize: NeoConstants.fontCaption; font.bold: true; color: "#E0E0E0"
             }
         }
@@ -324,11 +329,13 @@ InvestigationBase {
 
     function getConclusion() {
         if (dataPoints.length >= requiredDataPoints) {
-            return qsTr("Kết luận: Đom đóm phát sáng bằng PHÁT QUANG SINH HỌC (bioluminescence) — hiệu suất gần 100%, " +
-                        "gần như toàn bộ năng lượng chuyển thành ánh sáng, không tỏa nhiệt. " +
-                        "Bóng đèn sợi đốt chỉ đạt 10% hiệu suất sáng, 90% mất thành nhiệt. " +
-                        "Que phát sáng dùng phản ứng hóa học, hiệu suất khoảng 25%. " +
-                        "Đom đóm là nguồn sáng hiệu quả nhất trong tự nhiên nhờ phản ứng Luciferin + O₂ + Luciferase!")
+            return qsTr("Kết luận: điều đặc biệt của đom đóm không phải là 'biến 100% năng lượng thành ánh sáng' — " +
+                        "mà là 'gần như KHÔNG TỎA NHIỆT'. Hai điều đó khác nhau.\n\n" +
+                        "Bóng đèn sợi đốt: ~5% thành ánh sáng, ~95% thoát ra thành NHIỆT — nên rất nóng.\n" +
+                        "Que phát sáng: ~15% thành ánh sáng, chỉ ~5% thành nhiệt.\n" +
+                        "Đom đóm: ~40% thành ánh sáng, chỉ ~1% thành nhiệt — nên bụng đom đóm mát.\n\n" +
+                        "Vậy 60% năng lượng còn lại của đom đóm đi đâu? Nó nằm lại trong các SẢN PHẨM HÓA HỌC của phản ứng " +
+                        "Luciferin + O₂ + Luciferase, chứ không thoát ra thành nhiệt. Đó là lý do ta gọi đây là 'ánh sáng lạnh'.")
         }
         return qsTr("Cần thêm dữ liệu để kết luận.")
     }

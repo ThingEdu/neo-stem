@@ -2,50 +2,53 @@ import QtQuick
 import "../../core"
 
 ProblematizeChallenge {
-    title: qsTr("Thách thức: Sáo trúc Việt Nam")
+    title: qsTr("Thách thức: Sáo trúc — gõ hay thổi?")
 
-    scenario: qsTr("Bạn Minh xem nghệ sĩ thổi sáo trúc (sáo Việt Nam truyền thống). " +
-                   "Nghệ sĩ chỉ dùng một ống tre có lỗ, nhưng bịt mở các lỗ khác nhau " +
-                   "thì tạo ra các nốt nhạc Đồ, Rê, Mi, Fa, Sol, La, Si rõ ràng. " +
-                   "Minh nhớ lại thí nghiệm chai nước xylophone — nguyên lý có giống nhau không?")
+    scenario: qsTr("Bạn Minh xem nghệ sĩ thổi sáo trúc. Nghệ sĩ chỉ dùng một ống tre có lỗ, " +
+                   "nhưng bịt mở các lỗ khác nhau thì tạo ra các nốt Đồ, Rê, Mi, Fa, Sol rõ ràng. " +
+                   "Minh nhớ lại thí nghiệm chai nước: GÕ và THỔI cho quy luật ngược nhau. " +
+                   "Vậy cây sáo trúc hoạt động giống cách nào?")
 
-    challengeQuestion: qsTr("Tại sao bịt lỗ sáo khác nhau tạo nốt nhạc khác nhau?")
+    challengeQuestion: qsTr("Sáo trúc giống cách GÕ hay cách THỔI chai nước?")
 
     choices: [
         {
-            text: qsTr("Bịt lỗ thay đổi chiều dài cột không khí rung trong ống, thay đổi tần số rung = nốt nhạc khác nhau"),
+            text: qsTr("Giống cách THỔI — vật rung là cột không khí trong ống; bịt lỗ làm cột khí dài ra nên tiếng trầm hơn"),
             correct: true,
-            explanation: qsTr("Đúng! Khi bịt các lỗ trên sáo, không khí bị giữ lại trong ống dài hơn → cột không khí dài → rung chậm → tần số thấp → tiếng trầm. " +
-                             "Khi mở lỗ, không khí thoát ra sớm → cột không khí ngắn → rung nhanh → tần số cao → tiếng cao. " +
-                             "Nguyên lý hoàn toàn giống chai nước xylophone: chiều dài cột không khí quyết định cao độ âm thanh!")
+            explanation: qsTr("Đúng! Ở sáo trúc, thân tre gần như đứng yên — thứ rung lên là CỘT KHÔNG KHÍ bên trong ống, " +
+                             "y hệt khi ta thổi ngang miệng chai nước.\n\n" +
+                             "Bịt nhiều lỗ → không khí bị giữ trong đoạn ống dài hơn → cột khí dài → rung chậm → tần số thấp → tiếng TRẦM.\n" +
+                             "Mở lỗ → không khí thoát ra sớm → cột khí ngắn → rung nhanh → tần số cao → tiếng CAO.\n\n" +
+                             "Muốn biết cao độ thay đổi ra sao, luôn phải hỏi trước: CÁI GÌ đang rung?")
         },
         {
-            text: qsTr("Các lỗ sáo tạo ra gió mạnh yếu khác nhau"),
+            text: qsTr("Giống cách GÕ — vì ống tre là vật rắn, chính thân tre rung lên tạo ra âm thanh"),
             correct: false,
-            explanation: qsTr("Không phải. Lỗ sáo không tạo gió — chúng thay đổi chiều dài cột không khí rung bên trong ống sáo. " +
-                             "Chính chiều dài cột không khí quyết định tần số, không phải luồng gió.")
+            explanation: qsTr("Chưa đúng. Thân tre có rung một chút, nhưng đó chỉ là âm sắc. " +
+                             "Nếu bịt chặt hai đầu ống rồi thổi, sáo sẽ không kêu — chứng tỏ thứ tạo ra nốt nhạc là cột không khí, không phải thân tre.\n\n" +
+                             "Nhạc cụ thuộc nhóm GÕ (thân vật rung) là đàn đá, chuông, mõ, cồng chiêng — chúng vẫn kêu khi không có khoang khí nào.")
         },
         {
-            text: qsTr("Mỗi lỗ sáo có kích thước khác nhau nên âm thanh khác nhau"),
+            text: qsTr("Không giống cách nào, vì sáo dùng hơi người thổi nên là nguyên lý hoàn toàn khác"),
             correct: false,
-            explanation: qsTr("Kích thước lỗ có ảnh hưởng nhỏ, nhưng yếu tố chính là VỊ TRÍ lỗ trên ống sáo. " +
-                             "Vị trí lỗ quyết định chiều dài cột không khí rung — đó mới là nguyên nhân thay đổi cao độ.")
+            explanation: qsTr("Hơi thổi chỉ là cách CUNG CẤP năng lượng, giống như que gõ ở chai nước. " +
+                             "Điều quyết định cao độ vẫn là vật nào rung và nó nặng hay nhẹ, dài hay ngắn. " +
+                             "Ở sáo, đó là cột không khí — đúng như cách THỔI chai nước.")
         },
         {
-            text: qsTr("Tre là vật liệu đặc biệt tự tạo ra nhiều nốt nhạc"),
+            text: qsTr("Giống cả hai, vì cách nào cũng tạo ra âm thanh nên nguyên lý như nhau"),
             correct: false,
-            explanation: qsTr("Vật liệu tre ảnh hưởng đến âm sắc (màu sắc âm thanh) nhưng không quyết định cao độ. " +
-                             "Sáo bằng kim loại, nhựa, hay gỗ đều hoạt động theo cùng nguyên lý cột không khí. " +
-                             "Bất kỳ ống nào có lỗ đều có thể tạo nốt nhạc khác nhau.")
+            explanation: qsTr("Cùng tạo ra âm thanh, nhưng quy luật thì ngược nhau — đó chính là phát hiện của bài này. " +
+                             "Thêm nước vào chai: GÕ thì tiếng trầm đi, THỔI thì tiếng cao lên. " +
+                             "Không thể gộp hai cơ chế làm một.")
         }
     ]
 
-    extendedInfo: qsTr("Mở rộng: Nhiều nhạc cụ hơi hoạt động cùng nguyên lý cột không khí!\n\n" +
-                       "Sáo recorder (sáo dọc): Bịt lỗ thay đổi cột không khí — giống sáo trúc.\n\n" +
-                       "Đàn organ nhà thờ: Mỗi ống có chiều dài khác nhau — ống dài = tiếng trầm, ống ngắn = tiếng cao. " +
-                       "Ống lớn nhất dài tới 10 mét!\n\n" +
-                       "Kèn trumpet: Bấm van thay đổi chiều dài ống dẫn khí bên trong.\n\n" +
-                       "Nguyên lý chung: SÓNG DỪNG (standing waves) hình thành trong ống. " +
-                       "Chiều dài ống = bội số bước sóng → chỉ những tần số nhất định được khuếch đại (cộng hưởng). " +
-                       "Đó là lý do mỗi vị trí lỗ tạo ra đúng một nốt nhạc chính xác!")
+    extendedInfo: qsTr("Mở rộng: mọi nhạc cụ đều thuộc một trong hai nhóm này.\n\n" +
+                       "NHÓM CỘT KHÍ RUNG (giống cách THỔI): sáo trúc, sáo recorder, kèn trumpet, đàn organ nhà thờ. " +
+                       "Ống càng dài → tiếng càng trầm. Ống lớn nhất của organ nhà thờ dài tới 10 mét!\n\n" +
+                       "NHÓM VẬT RẮN RUNG (giống cách GÕ): đàn đá Việt Nam, cồng chiêng Tây Nguyên, mõ, chuông, đàn t'rưng. " +
+                       "Thanh đá càng to và nặng → tiếng càng trầm — đúng quy luật khối lượng mà em vừa đo ở chai nước.\n\n" +
+                       "Người xưa làm đàn đá đã biết chọn thanh đá theo kích thước để có đủ nốt, dù chưa hề có công thức nào. " +
+                       "Đó là khoa học rút ra từ quan sát và thử nghiệm — đúng cách em đang học.")
 }

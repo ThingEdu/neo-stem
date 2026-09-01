@@ -12,9 +12,11 @@ ProblematizeChallenge {
 
     choices: [
         {
-            text: qsTr("LED chuyển 90% điện năng thành ánh sáng, đèn sợi đốt chỉ 10% (90% thành nhiệt lãng phí)"),
+            text: qsTr("LED chuyển khoảng 35% điện năng thành ánh sáng, đèn sợi đốt chỉ khoảng 5% (95% thành nhiệt lãng phí)"),
             correct: true,
-            explanation: qsTr("Đúng! Đèn sợi đốt: dây tóc nóng 2500°C → 90% điện thành NHIỆT, chỉ 10% thành ánh sáng. Đèn LED: electron kích thích phát photon trực tiếp → 90% điện thành ÁNH SÁNG, rất ít nhiệt. Cùng độ sáng, LED cần ít điện hơn vì không lãng phí năng lượng vào nhiệt!")
+            explanation: qsTr("Đúng! Đèn sợi đốt phải ĐỐT NÓNG dây tóc lên 2500°C mới phát sáng — khoảng 95% điện năng thoát ra thành NHIỆT, chỉ ~5% thành ánh sáng. " +
+                             "Đèn LED cho electron phát photon trực tiếp, không qua bước đốt nóng — khoảng 35% điện năng thành ÁNH SÁNG (loại tốt nhất hiện nay đạt trên 50%). " +
+                             "Chênh khoảng 7 lần, đúng bằng tỉ số bóng LED 9W thay được bóng sợi đốt 60W mà em kiểm chứng được ngay ở cửa hàng.")
         },
         {
             text: qsTr("Vì LED dùng loại điện khác, ít tốn năng lượng hơn"),
@@ -24,19 +26,22 @@ ProblematizeChallenge {
         {
             text: qsTr("Vì LED nhỏ hơn nên cần ít điện hơn"),
             correct: false,
-            explanation: qsTr("Kích thước không quyết định hiệu suất. Vấn đề là tỷ lệ chuyển hóa: đèn sợi đốt lãng phí 90% điện thành nhiệt, trong khi LED chuyển hầu hết điện thành ánh sáng.")
+            explanation: qsTr("Kích thước không quyết định hiệu suất. Vấn đề là tỉ lệ chuyển hóa: đèn sợi đốt lãng phí khoảng 95% điện thành nhiệt, còn LED chuyển được khoảng 35% thành ánh sáng — gấp bảy lần.")
         },
         {
             text: qsTr("Vì LED phát sáng yếu hơn nên tốn ít điện"),
             correct: false,
-            explanation: qsTr("LED 9W cho độ sáng TƯƠNG ĐƯƠNG đèn sợi đốt 60W! LED không sáng yếu hơn — nó hiệu quả hơn vì chuyển điện thành ánh sáng trực tiếp, không qua bước đốt nóng.")
+            explanation: qsTr("LED 9W cho độ sáng TƯƠNG ĐƯƠNG đèn sợi đốt 60W — hơn gần 7 lần. LED không sáng yếu hơn; nó hiệu quả hơn vì chuyển điện thành ánh sáng trực tiếp, không qua bước đốt nóng.")
         }
     ]
 
-    extendedInfo: qsTr("So sánh hiệu suất các loại đèn:\n\n" +
-                       "Đèn sợi đốt: ~10% ánh sáng, ~90% nhiệt (tuổi thọ ~1.000 giờ)\n" +
-                       "Đèn huỳnh quang (compact): ~40% ánh sáng (tuổi thọ ~8.000 giờ)\n" +
-                       "Đèn LED: ~90% ánh sáng (tuổi thọ ~25.000 giờ)\n\n" +
-                       "Ứng dụng: Thay 1 bóng sợi đốt 60W bằng LED 9W tiết kiệm ~51W. " +
-                       "Với 20 bóng, bật 8 giờ/ngày, tiết kiệm ~245 kWh/năm!")
+    extendedInfo: qsTr("So sánh hiệu suất các loại đèn (phần điện năng thật sự thành ánh sáng):\n\n" +
+                       "Đèn sợi đốt: ~5% ánh sáng, ~95% nhiệt (tuổi thọ ~1.000 giờ)\n" +
+                       "Đèn huỳnh quang compact: ~15% ánh sáng (tuổi thọ ~8.000 giờ)\n" +
+                       "Đèn LED dân dụng: ~30-40% ánh sáng (tuổi thọ ~25.000 giờ)\n\n" +
+                       "Cách tự kiểm chứng: ra cửa hàng đọc nhãn bóng đèn. Bóng LED 9W ghi 'tương đương 60W' — " +
+                       "tỉ số 60/9 gần bằng 7, đúng bằng tỉ số 35% chia 5%. Con số trên nhãn và con số hiệu suất phải khớp nhau, " +
+                       "nếu không thì một trong hai đã sai.\n\n" +
+                       "Ứng dụng: thay 1 bóng sợi đốt 60W bằng LED 9W tiết kiệm ~51W. " +
+                       "Với 20 bóng, bật 8 giờ/ngày, tiết kiệm ~245 kWh/năm.")
 }

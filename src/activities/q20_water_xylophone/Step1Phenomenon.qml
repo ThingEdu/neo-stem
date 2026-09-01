@@ -3,12 +3,12 @@ import NEO_STEM
 
 PhenomenonViewer {
     title: qsTr("Hiện tượng: Chai nước xylophone")
-    description: qsTr("Các bạn nhỏ Việt Nam xếp 5 chai nước có mực nước khác nhau, dùng que gõ vào từng chai — mỗi chai phát ra tiếng khác nhau!")
+    description: qsTr("Các bạn nhỏ Việt Nam xếp 5 chai nước có mực nước khác nhau. Bạn Lan dùng que GÕ vào thành chai, bạn Minh THỔI ngang miệng chai — và hai bạn cãi nhau, vì chai nhiều nước cho kết quả ngược nhau!")
 
     hotspots: [
-        { x: 0.2, y: 0.5, label: qsTr("Chai ít nước"), detail: qsTr("Chai chứa ít nước → cột không khí bên trong dài → không khí rung chậm hơn → tần số thấp → nghe tiếng TRẦM.") },
-        { x: 0.7, y: 0.5, label: qsTr("Chai nhiều nước"), detail: qsTr("Chai chứa nhiều nước → cột không khí bên trong ngắn → không khí rung nhanh hơn → tần số cao → nghe tiếng CAO.") },
-        { x: 0.45, y: 0.2, label: qsTr("Tay gõ chai"), detail: qsTr("Khi gõ vào chai, thành chai rung → cột không khí bên trong rung theo → tạo sóng âm. Chiều dài cột không khí quyết định tần số âm thanh.") }
+        { x: 0.2, y: 0.5, label: qsTr("GÕ vào thành chai"), detail: qsTr("Khi gõ, vật rung là THÀNH THỦY TINH CÙNG KHỐI NƯỚC bên trong. Càng nhiều nước → khối lượng rung càng lớn → rung càng chậm → tần số THẤP → nghe tiếng TRẦM.") },
+        { x: 0.7, y: 0.5, label: qsTr("THỔI ngang miệng chai"), detail: qsTr("Khi thổi, vật rung là CỘT KHÔNG KHÍ phía trên mặt nước. Càng nhiều nước → cột không khí càng ngắn → rung càng nhanh → tần số CAO → nghe tiếng CAO.") },
+        { x: 0.45, y: 0.2, label: qsTr("Hai kết quả ngược nhau"), detail: qsTr("Cùng một chai đầy nước: gõ thì nghe TRẦM, thổi thì nghe CAO. Không ai sai cả — vì hai cách làm rung hai vật khác nhau. Đây chính là câu đố của bài này!") }
     ]
 
     sceneComponent: Component {
@@ -164,7 +164,7 @@ PhenomenonViewer {
             Text {
                 anchors.bottom: parent.bottom; anchors.bottomMargin: 8
                 anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Gõ chai nước — Mỗi mực nước khác nhau tạo âm thanh khác nhau")
+                text: qsTr("Gõ hay thổi? Cùng một chai, hai cách tạo âm cho kết quả ngược nhau")
                 font.pixelSize: NeoConstants.fontCaption; color: "#5D4037"; font.bold: true
             }
         }

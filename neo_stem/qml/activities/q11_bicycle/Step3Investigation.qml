@@ -4,13 +4,14 @@ import QtQuick.Layouts
 
 InvestigationBase {
     title: qsTr("Thí nghiệm: Máng nghiêng và viên bi")
-    instructions: qsTr("Thay đổi độ cao và góc nghiêng. Quan sát tốc độ viên bi ở cuối máng. Ghi lại dữ liệu.")
+    instructions: qsTr("Chỉ thay đổi MỘT biến: độ cao của máng. Đo tốc độ viên bi ở cuối máng. Ghi lại dữ liệu.")
     requiredDataPoints: 5
-    dataHeaders: [qsTr("Độ cao (cm)"), qsTr("Góc (°)"), qsTr("Tốc độ")]
+    dataHeaders: [qsTr("Độ cao (cm)"), qsTr("Tốc độ (cm/s)"), qsTr("Nhận xét")]
 
-    property real rampHeight: 20  // 10-50 cm
-    property real rampAngle: rampHeight * 0.9  // approximate
-    property real ballSpeed: Math.sqrt(rampHeight) * 15  // proportional to sqrt(h)
+    property real rampHeight: 20  // 10-50 cm — BIẾN ĐỘC LẬP DUY NHẤT của thí nghiệm này
+    // Bảo toàn cơ năng: m*g*h = 1/2*m*v^2  →  v = sqrt(2*g*h), tức v tỉ lệ với CĂN BẬC HAI độ cao.
+    // Gấp đôi độ cao KHÔNG làm tốc độ gấp đôi, chỉ nhanh hơn khoảng 1,41 lần.
+    property real ballSpeed: Math.sqrt(rampHeight) * 15
 
     experimentArea: [
         Item {
@@ -36,7 +37,10 @@ InvestigationBase {
                     // Flat section
                     ctx.fillRect(width * 0.65, bottomY, width * 0.3, 6)
                 }
-                onRampHeightChanged: requestPaint()
+                // rampHeight thuộc về InvestigationBase (gốc file), không thể viết
+                // onRampHeightChanged trực tiếp trong Canvas con — phải nhân bản thuộc tính.
+                property real hWatch: rampHeight
+                onHWatchChanged: requestPaint()
             }
 
             // Ball rolling animation
@@ -111,15 +115,17 @@ InvestigationBase {
 
     function recordCurrentData() {
         var speedLabel = ballSpeed < 40 ? qsTr("Chậm") : (ballSpeed < 70 ? qsTr("Vừa") : qsTr("Nhanh"))
-        addDataPoint([Math.round(rampHeight), Math.round(rampAngle), speedLabel])
+        addDataPoint([Math.round(rampHeight), Math.round(ballSpeed), speedLabel])
     }
 
     function getConclusion() {
         if (dataPoints.length >= requiredDataPoints) {
-            return qsTr("Kết luận: Khi viên bi ở trên cao, nó có THẾ NĂNG hấp dẫn (năng lượng do vị trí). " +
-                        "Khi lăn xuống, trọng lực kéo viên bi → thế năng chuyển thành ĐỘNG NĂNG (năng lượng chuyển động). " +
-                        "Càng cao → càng nhiều thế năng → càng nhanh ở cuối dốc. " +
-                        "Xe đạp xuống dốc cũng vậy — trọng lực chuyển thế năng thành động năng!")
+            return qsTr("Kết luận: viên bi ở trên cao mang THẾ NĂNG hấp dẫn (W = m·g·h). Khi lăn xuống, " +
+                        "toàn bộ thế năng chuyển thành ĐỘNG NĂNG (W = 1/2·m·v²).\n\n" +
+                        "Cho hai vế bằng nhau: m·g·h = 1/2·m·v²  →  v = căn bậc hai của (2·g·h).\n\n" +
+                        "Hãy kiểm tra lại bảng số liệu của em: nâng máng từ 10 cm lên 40 cm là gấp BỐN lần độ cao, " +
+                        "nhưng tốc độ chỉ tăng khoảng HAI lần — vì tốc độ tỉ lệ với CĂN BẬC HAI của độ cao, không tỉ lệ thẳng.\n\n" +
+                        "Xe đạp xuống dốc cũng vậy: dốc cao gấp đôi không làm xe nhanh gấp đôi.")
         }
         return qsTr("Cần thêm dữ liệu để kết luận.")
     }
