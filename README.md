@@ -23,7 +23,8 @@ Mỗi hoạt động giúp học sinh quan sát, đặt câu hỏi, thử nghi�
 
 > **Vì sao là lớp 4 chứ không phải lớp 3.** Chương trình GDPT 2018 chỉ có môn Khoa học **từ lớp 4**;
 > lớp 1-3 học Tự nhiên và Xã hội, chương trình đó không có bay hơi, ngưng tụ, tần số hay mạch điện.
-> Nhãn lớp của từng hoạt động hiện ngay trên thẻ chọn bài.
+> Ánh xạ đầy đủ 20 hoạt động sang môn, lớp, mạch nội dung và yêu cầu cần đạt:
+> [`docs/BAN_DO_GDPT_2018.md`](docs/BAN_DO_GDPT_2018.md).
 
 ## Nội dung nổi bật
 
@@ -94,3 +95,7 @@ MIT - Bình Dân Học STEM & Robot
 
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) - Kiến trúc ứng dụng
 - [docs/publishing.md](docs/publishing.md) - Quy trình phát hành
+- [docs/BAN_DO_GDPT_2018.md](docs/BAN_DO_GDPT_2018.md) - Bản đồ 20 hoạt động theo môn, lớp, mạch nội dung, yêu cầu cần đạt
+- [docs/RA_SOAT_NOI_DUNG_K12.md](docs/RA_SOAT_NOI_DUNG_K12.md) - Báo cáo rà soát độ chính xác nội dung
+- [docs/SO_TAY_HOC_SINH_TIEU_HOC.md](docs/SO_TAY_HOC_SINH_TIEU_HOC.md) - Sổ tay học sinh lớp 4-5
+- [docs/SO_TAY_HOC_SINH_THCS.md](docs/SO_TAY_HOC_SINH_THCS.md) - Sổ tay học sinh lớp 6-9
