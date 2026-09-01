@@ -1,6 +1,6 @@
 # NEO STEM
 
-Ứng dụng giáo dục STEM tương tác cho học sinh Việt Nam (Lớp 3-9), học từ những hiện tượng đời sống quen thuộc theo cách trực quan, chạm để khám phá và có thể dùng cả khi không có Internet.
+Ứng dụng giáo dục STEM tương tác cho học sinh Việt Nam (**Lớp 4-9**), bám Chương trình GDPT 2018, học từ những hiện tượng đời sống quen thuộc theo cách trực quan, chạm để khám phá và có thể dùng cả khi không có Internet.
 
 ## Ứng dụng này là gì?
 
@@ -10,15 +10,20 @@ Mỗi hoạt động giúp học sinh quan sát, đặt câu hỏi, thử nghi�
 
 ## Dành cho ai
 
-- Học sinh Việt Nam lớp 3-9 (8-15 tuổi)
+- Học sinh Việt Nam **lớp 4-9** — môn Khoa học (lớp 4-5) và Khoa học tự nhiên (lớp 6-9)
 - Phụ huynh và giáo viên muốn có nội dung STEM dễ dùng, có lộ trình rõ ràng
 - Môi trường học tại nhà, lớp học, thư viện hoặc trung tâm
 
 ## Trải nghiệm học tập
 
-- 3 cấp độ phù hợp theo khối lớp (cơ bản, trung cấp, nâng cao)
+- 3 cấp độ theo môn học: **Khoa học 4-5** · **KHTN 6-7** · **KHTN 8-9**, mỗi hoạt động ghi rõ lớp theo GDPT 2018
 - Mỗi bước được chấm sao (1-3 sao), tối đa 300 sao cho toàn bộ nội dung
 - 29 huy hiệu khích lệ tiến bộ và sự kiên trì
+
+
+> **Vì sao là lớp 4 chứ không phải lớp 3.** Chương trình GDPT 2018 chỉ có môn Khoa học **từ lớp 4**;
+> lớp 1-3 học Tự nhiên và Xã hội, chương trình đó không có bay hơi, ngưng tụ, tần số hay mạch điện.
+> Nhãn lớp của từng hoạt động hiện ngay trên thẻ chọn bài.
 
 ## Nội dung nổi bật
 
@@ -84,3 +89,8 @@ neo-stem
 ## License
 
 MIT - Bình Dân Học STEM & Robot
+
+## Tài liệu
+
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) - Kiến trúc ứng dụng
+- [docs/publishing.md](docs/publishing.md) - Quy trình phát hành

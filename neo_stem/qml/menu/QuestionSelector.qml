@@ -160,7 +160,7 @@ Item {
                             Text {
                                 id: ageText
                                 anchors.centerIn: parent
-                                text: groupSection.modelData.age + " " + qsTr("tuổi")
+                                text: qsTr("Lớp ") + groupSection.modelData.grades
                                 font.pixelSize: NeoConstants.fontSmall
                                 font.bold: true
                                 color: "white"
@@ -350,7 +350,10 @@ Item {
                                             text: {
                                                 if (!card.questionData) return ""
                                                 var label = NeoConstants.levelLabels[card.questionData.level] || ""
-                                                return label + " " + qsTr("L") + card.questionData.gradeRange
+                                                // Hiện tên môn + lớp theo GDPT 2018, ví dụ "Khoa học 4", "KHTN 9".
+                                                // Hoạt động ngoài chương trình chỉ hiện nhãn "Ngoại khóa".
+                                                if (card.questionData.gradeCore <= 0) return label
+                                                return label + " " + card.questionData.gradeCore
                                             }
                                             font.pixelSize: NeoConstants.fontSmall
                                             font.bold: true
