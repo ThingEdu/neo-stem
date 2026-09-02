@@ -240,12 +240,32 @@ Item {
             }
 
             Text {
+                text: qsTr("Giấy phép")
+                font.pixelSize: NeoConstants.fontCaption
+                font.bold: true
+                color: "#555555"
+                topPadding: 12
+            }
+
+            Text {
                 width: parent.width
-                text: qsTr("Cộng đồng Bình Dân Học STEM & Robot")
+                text: qsTr("NEO STEM là phần mềm MÃ NGUỒN MỞ, PHI THƯƠNG MẠI, mở miễn phí cho học sinh.\n\n" +
+                           "Mã nguồn theo giấy phép MIT. Nội dung 20 hoạt động và tài liệu theo giấy phép " +
+                           "Creative Commons CC BY-SA 4.0 — ai chỉnh sửa cũng phải mở lại cho học sinh khác dùng.\n\n" +
+                           "Mã nguồn: github.com/ThingEdu/neo-stem")
+                font.pixelSize: NeoConstants.fontSmall
+                color: "#666666"
+                wrapMode: Text.WordWrap
+            }
+
+            Text {
+                width: parent.width
+                text: qsTr("Bản quyền © 2026 Cộng đồng Bình Dân Học STEM & Robot · ThingEdu")
                 font.pixelSize: NeoConstants.fontSmall
                 color: "#888888"
                 wrapMode: Text.WordWrap
                 topPadding: 8
+                bottomPadding: 8
             }
         }
     }

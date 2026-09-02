@@ -128,7 +128,32 @@ Câu ghi công dùng thống nhất trong README, trong ứng dụng (Cài đặ
 
 Câu cuối là bắt buộc: giấy phép Creative Commons yêu cầu **không được để người đọc hiểu nhầm rằng bên giữ bản quyền bảo trợ cho sản phẩm của mình.**
 
-⚠️ **Lưu ý nếu NEO STEM đi theo hướng thương mại** (bán kèm máy NEO One, bán bản quyền cho trường): phần cấp Tiểu học và THPT của OpenSciEd mang giấy phép **NC — phi thương mại**. Chỉ mượn khung phương pháp thì không vướng, vì phương pháp không phải đối tượng của bản quyền. Nhưng nếu sau này có lấy trực tiếp nội dung unit nào của OpenSciEd thì phải xin *License for Commercial Use of Curriculum Materials*. Nên chốt điểm này với người phụ trách sản phẩm **trước** khi mở rộng thương mại.
+### Giấy phép của chính NEO STEM
+
+NEO STEM là **mã nguồn mở, phi thương mại, mở miễn phí cho học sinh**, và dùng hai giấy phép tách theo loại tài sản:
+
+| | Giấy phép | Gồm những gì |
+|---|---|---|
+| **Mã nguồn** | MIT | Mã Python, cấu trúc tệp QML, kịch bản build và đóng gói |
+| **Nội dung giáo dục** | **CC BY-SA 4.0** | Nội dung 20 hoạt động, tài liệu trong `docs/`, hình minh hoạ |
+
+Vì sao chọn **Chia sẻ tương tự** chứ không phải **Phi thương mại** — dù dự án là phi thương mại?
+
+Vì hai thứ đó ngăn hai điều khác nhau. Điều dự án thực sự muốn ngăn không phải là *"có người kiếm tiền"*, mà là **"có người đóng kín nội dung lại"**. Chia sẻ tương tự ngăn đúng điều đó: ai chỉnh sửa cũng buộc phải mở lại cho học sinh khác dùng.
+
+Còn giấy phép phi thương mại sẽ chặn cả những việc đáng khuyến khích: một trường in sổ tay bán lại đúng giá giấy, một đối tác phân phối máy đã cài sẵn ứng dụng, một nhà xuất bản đưa bài học vào sách tham khảo. Thêm nữa, giấy phép NC **không đạt Định nghĩa Nguồn Mở** vì phân biệt theo lĩnh vực sử dụng — dùng nó thì NEO STEM không còn được gọi là mã nguồn mở đúng nghĩa.
+
+Nên: **phi thương mại là lập trường của dự án, không phải điều cấm áp lên người khác.** Chúng tôi không bán NEO STEM và không có ý định bán.
+
+### NEO STEM đứng ở đâu so với OpenSciEd
+
+NEO STEM là **mã nguồn mở, phi thương mại, mở cho học sinh học miễn phí**. Đó là lựa chọn có chủ ý, và nó khép kín câu chuyện bản quyền một cách gọn gàng:
+
+- Ràng buộc **NC** ở phần cấp Tiểu học và THPT của OpenSciEd **không gây vướng gì** cho NEO STEM, vì NEO STEM cũng phi thương mại.
+- Dù vậy, NEO STEM vốn đã không vướng ngay từ đầu: nó **chỉ mượn khung phương pháp**, mà phương pháp giảng dạy không phải đối tượng bảo hộ của bản quyền. Không dòng nội dung nào chép từ unit của OpenSciEd.
+- Tinh thần cũng khớp: OpenSciEd mở tài liệu miễn phí vì giáo viên Mỹ không đủ tiền mua sách theo chuẩn mới. NEO STEM mở vì học sinh Việt ở điểm trường vùng xa cũng cần đúng một thứ như vậy.
+
+⚠️ **Điều duy nhất cần theo dõi về sau:** nếu có lúc nào NEO STEM lấy **trực tiếp nội dung** một unit của OpenSciEd (không chỉ khung phương pháp) *và* đồng thời chuyển sang mô hình thương mại, thì mới phải xin *License for Commercial Use of Curriculum Materials*. Ở trạng thái hiện nay, cả hai vế đều không đúng.
 
 ---
 
@@ -142,3 +167,5 @@ Câu cuối là bắt buộc: giấy phép Creative Commons yêu cầu **không 
 | **NEO STEM tự thêm** | Thí nghiệm mô phỏng tương tác, kèm ba kỷ luật ở mục 4 |
 | **NEO STEM chưa làm được** | **Storyline thật** — 20 hoạt động vẫn rời rạc, thiếu Navigation Routine |
 | **Tuyệt đối không phải** | Bản dịch tài liệu OpenSciEd. Không hiện tượng nào lấy từ unit của họ. |
+| **NEO STEM đứng ở đâu** | Mã nguồn mở · phi thương mại · miễn phí cho học sinh — cùng tinh thần với nguồn nó mượn |
+| **Giấy phép** | Mã nguồn MIT · Nội dung **CC BY-SA 4.0** — chọn Chia sẻ tương tự thay vì Phi thương mại, vì thứ cần ngăn là việc đóng kín nội dung, không phải việc kiếm tiền |

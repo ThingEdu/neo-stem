@@ -27,6 +27,8 @@ Nhưng **những hiện tượng trong phần mềm thì là của Việt Nam m�
 
 Nghĩa là: mượn **cách làm** của họ, còn **câu chuyện** thì mình tự kể.
 
+Và giống như họ, **NEO STEM cũng cho không** — phần mềm miễn phí, mã nguồn mở, ai cũng tải về dùng và sửa được, miễn là sửa xong thì mở lại cho bạn khác cùng dùng.
+
 ---
 
 ## 2. Bấm nút nào? (Hướng dẫn từng bước)

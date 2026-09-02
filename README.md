@@ -104,9 +104,23 @@ Tư tưởng **storyline** mượn từ OpenSciEd, phần NEO STEM mở rộng t
 phỏng) và lưu ý bản quyền khi dùng cho mục đích thương mại:
 [`docs/TRIET_LY_NEO_STEM.md`](docs/TRIET_LY_NEO_STEM.md).
 
-## License
+## Giấy phép
 
-MIT - Bình Dân Học STEM & Robot
+NEO STEM là dự án **mã nguồn mở, phi thương mại, mở miễn phí cho học sinh**.
+Hai loại tài sản dùng hai giấy phép khác nhau:
+
+| | Giấy phép | Gồm những gì |
+|---|---|---|
+| **Mã nguồn** | [MIT](LICENSE) | Mã Python trong `neo_stem/`, cấu trúc các tệp QML, kịch bản build và đóng gói |
+| **Nội dung giáo dục** | [CC BY-SA 4.0](LICENSE-NOI-DUNG.md) | Nội dung 20 hoạt động, tài liệu trong `docs/`, hình minh hoạ do dự án tạo |
+
+Chúng tôi chọn **Chia sẻ tương tự (ShareAlike)** thay vì **Phi thương mại (NonCommercial)**
+vì điều dự án muốn ngăn không phải là "có người kiếm tiền", mà là **có người đóng
+kín nội dung lại**. Ai chỉnh sửa cũng phải mở lại cho học sinh khác dùng. Phi thương
+mại là lập trường của dự án — chúng tôi không bán NEO STEM — chứ không cần thành một
+điều cấm áp lên người khác. Lý do đầy đủ: [LICENSE-NOI-DUNG.md](LICENSE-NOI-DUNG.md).
+
+Bản quyền © 2026 Bình Dân Học STEM & Robot · ThingEdu
 
 ## Tài liệu
 

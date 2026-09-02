@@ -39,6 +39,10 @@ Còn **20 hiện tượng trong NEO STEM thì hoàn toàn là của Việt Nam**
 
 Nói cách khác: **mượn cách làm, tự viết nội dung.** Đó cũng là một kiểu bản địa hóa đáng học — không bê nguyên tài liệu nước ngoài về dịch, mà lấy phương pháp rồi soạn lại bằng chất liệu của mình.
 
+**NEO STEM cũng mở như vậy.** Phần mềm là mã nguồn mở, phi thương mại, miễn phí cho học sinh — mã nguồn ở `github.com/ThingEdu/neo-stem`. Bạn tải về đọc được, sửa được, và nếu sửa thì bản của bạn cũng phải mở lại cho người khác (giấy phép CC BY-SA 4.0 cho nội dung, MIT cho mã).
+
+Đây không phải chi tiết pháp lý khô khan. Nếu bạn tìm ra một chỗ sai trong phần mềm như những chỗ ở mục 7, bạn **được quyền tự sửa và gửi bản sửa lên** — đúng cách những phần mềm mã nguồn mở lớn nhất thế giới vẫn được cải thiện.
+
 *(NEO STEM không phải sản phẩm của OpenSciEd và không được OpenSciEd thẩm định.)*
 
 ---

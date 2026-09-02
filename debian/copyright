@@ -7,6 +7,25 @@ Files: *
 Copyright: 2026 Bình Dân Học STEM & Robot, ThingEdu
 License: MIT
 
+Files: docs/*
+ neo_stem/qml/activities/*
+Copyright: 2026 Bình Dân Học STEM & Robot, ThingEdu
+License: CC-BY-SA-4.0
+Comment: Nội dung giáo dục (nội dung 20 hoạt động và tài liệu) phát hành theo
+ CC BY-SA 4.0. Các tệp QML hoạt động mang cả hai giấy phép: phần mã giao diện
+ theo MIT, phần chuỗi văn bản nội dung bài học theo CC BY-SA 4.0.
+ Xem LICENSE-NOI-DUNG.md.
+
+License: CC-BY-SA-4.0
+ Creative Commons Attribution-ShareAlike 4.0 International.
+ .
+ Bạn được tự do chia sẻ và chỉnh sửa nội dung này, kể cả cho mục đích thương
+ mại, với hai điều kiện: ghi công đúng cách kèm liên kết tới giấy phép và nêu
+ rõ có thay đổi hay không; và phát hành mọi bản phái sinh theo cùng giấy phép
+ CC BY-SA 4.0.
+ .
+ Toàn văn giấy phép: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
 License: MIT
  Permission is hereby granted, free of charge, to any person obtaining a
  copy of this software and associated documentation files (the
