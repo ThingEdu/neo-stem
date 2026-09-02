@@ -19,6 +19,16 @@ Sau mỗi bài, em phải **làm thật** ở nhà một lần. Cuốn sổ này
 
 ---
 
+## Năm bước này ở đâu ra?
+
+Cách học năm bước mà em sắp làm là của một nhóm nhà giáo dục ở Mỹ tên là **OpenSciEd**. Họ cho không tài liệu để ai cũng dùng được, ở địa chỉ openscied.org.
+
+Nhưng **những hiện tượng trong phần mềm thì là của Việt Nam mình** — sương mù Đà Lạt, ruộng muối, rừng ngập mặn Cần Giờ, cái nồi cơm điện ở nhà em. Không có cái nào dịch từ sách nước ngoài cả.
+
+Nghĩa là: mượn **cách làm** của họ, còn **câu chuyện** thì mình tự kể.
+
+---
+
 ## 2. Bấm nút nào? (Hướng dẫn từng bước)
 
 ### Mở phần mềm

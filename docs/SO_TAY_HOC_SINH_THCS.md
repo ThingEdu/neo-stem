@@ -25,6 +25,24 @@ Mỗi hoạt động đi qua 5 bước, lặp lại đúng vòng làm việc c�
 
 ---
 
+## Cách học này đến từ đâu
+
+Năm bước bạn sắp đi qua không phải do NEO STEM nghĩ ra. Đó là mô hình dạy học của **OpenSciEd** — một chương trình khoa học phổ thông mã nguồn mở của Mỹ, hiện được dùng ở nhiều bang. Bạn tra được toàn bộ tài liệu gốc, miễn phí, tại <https://www.openscied.org>.
+
+Điều đáng chú ý trong mô hình đó: **câu hỏi dẫn dắt cả bài học là câu hỏi của học sinh, không phải của giáo viên.** Đó là lý do bước 2 quan trọng hơn vẻ ngoài của nó rất nhiều.
+
+OpenSciEd gọi ý tưởng này là **storyline** — mạch chuyện học tập. Bài học phải mạch lạc *theo góc nhìn của bạn*, chứ không phải theo trật tự mà người lớn thấy hợp lý. Bạn nên muốn biết bước tiếp theo giống như muốn biết trang sau của một cuốn truyện. Nếu trong lúc học bạn thấy mình đang hỏi *"học cái này để làm gì?"* thì mạch chuyện đã đứt ở đâu đó.
+
+*(Nói thật với bạn: NEO STEM hiện chưa làm được trọn vẹn điều này — 20 hoạt động vẫn đứng rời nhau, học xong một bài chưa dẫn sang bài kế. Đó là phần còn thiếu lớn nhất của phần mềm.)*
+
+Còn **20 hiện tượng trong NEO STEM thì hoàn toàn là của Việt Nam** — sương mù Đà Lạt, ruộng muối Ninh Thuận, rừng ngập mặn Cần Giờ, sáo trúc, đàn đá, cồng chiêng. Không hiện tượng nào dịch từ tài liệu OpenSciEd. Mỗi hoạt động còn được đối chiếu lại với Chương trình GDPT 2018 để khớp đúng lớp bạn đang học.
+
+Nói cách khác: **mượn cách làm, tự viết nội dung.** Đó cũng là một kiểu bản địa hóa đáng học — không bê nguyên tài liệu nước ngoài về dịch, mà lấy phương pháp rồi soạn lại bằng chất liệu của mình.
+
+*(NEO STEM không phải sản phẩm của OpenSciEd và không được OpenSciEd thẩm định.)*
+
+---
+
 ## 2. Sổ tay 4 cột — bắt buộc có
 
 Trước khi mở phần mềm, hãy kẻ vào vở một bảng như thế này cho mỗi hoạt động:

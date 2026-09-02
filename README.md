@@ -87,6 +87,23 @@ neo-stem
 - Windows 10+, macOS 13+, Linux (Ubuntu 22.04+ / Debian 12+)
 - Python 3.8+ và PyQt6 6.5+
 
+## Ghi công
+
+Quy trình 5 bước của NEO STEM phỏng theo mô hình dạy học của **OpenSciEd**
+(<https://www.openscied.org>) — Anchoring Phenomenon, Driving Question Board,
+Investigation, Putting the Pieces Together, Problematizing. Tài liệu của
+OpenSciEd phát hành theo giấy phép Creative Commons **CC BY 4.0** (cấp THCS) và
+**CC BY-NC 4.0** (cấp Tiểu học và THPT).
+
+Nội dung 20 hoạt động trong NEO STEM là **biên soạn mới cho bối cảnh Việt Nam,
+không phải bản dịch** tài liệu của OpenSciEd, và được ánh xạ lại theo Chương
+trình GDPT 2018 thay vì chuẩn NGSS của Mỹ. OpenSciEd không thẩm định và không
+bảo trợ cho NEO STEM.
+
+Tư tưởng **storyline** mượn từ OpenSciEd, phần NEO STEM mở rộng thêm (thí nghiệm mô
+phỏng) và lưu ý bản quyền khi dùng cho mục đích thương mại:
+[`docs/TRIET_LY_NEO_STEM.md`](docs/TRIET_LY_NEO_STEM.md).
+
 ## License
 
 MIT - Bình Dân Học STEM & Robot
@@ -95,6 +112,7 @@ MIT - Bình Dân Học STEM & Robot
 
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) - Kiến trúc ứng dụng
 - [docs/publishing.md](docs/publishing.md) - Quy trình phát hành
+- [docs/TRIET_LY_NEO_STEM.md](docs/TRIET_LY_NEO_STEM.md) - Triết lý: OpenSciEd & storyline, Papert, và phần NEO STEM mở rộng
 - [docs/BAN_DO_GDPT_2018.md](docs/BAN_DO_GDPT_2018.md) - Bản đồ 20 hoạt động theo môn, lớp, mạch nội dung, yêu cầu cần đạt
 - [docs/RA_SOAT_NOI_DUNG_K12.md](docs/RA_SOAT_NOI_DUNG_K12.md) - Báo cáo rà soát độ chính xác nội dung
 - [docs/SO_TAY_HOC_SINH_TIEU_HOC.md](docs/SO_TAY_HOC_SINH_TIEU_HOC.md) - Sổ tay học sinh lớp 4-5

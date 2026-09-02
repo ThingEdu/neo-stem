@@ -362,6 +362,80 @@ Kết quả: **120/120 file nạp được** sau khi vá. Trước khi vá là 1
 
 ---
 
-## 5. Lưu ý về nguồn đối chiếu
+---
+
+## 5. Nguồn gốc phương pháp, bản quyền và mức độ bản địa hóa
+
+### Cái gì mượn của OpenSciEd
+
+NEO STEM dùng **mô hình dạy học của OpenSciEd** — một chương trình khoa học phổ thông mã nguồn mở của Mỹ, phát triển với sự tài trợ của Carnegie Corporation of New York và một số quỹ khác. Trang chính thức: <https://www.openscied.org>.
+
+Cụ thể, phần mượn là **khung quy trình lên lớp**, gồm các "routine" mà OpenSciEd đặt tên như sau:
+
+| Tên gốc của OpenSciEd | Bước trong NEO STEM | Ý nghĩa |
+|---|---|---|
+| Anchoring Phenomenon Routine | **Bước 1 — Hiện tượng Neo** | Mở đầu bằng một hiện tượng thật, hấp dẫn và khó giải thích ngay, để kích hoạt tò mò |
+| Driving Question Board (DQB) | **Bước 2 — Bảng câu hỏi** | Học sinh tự viết thắc mắc lên bảng; cả quá trình sau đó do chính câu hỏi của các em dẫn dắt |
+| Investigation Routine | **Bước 3 — Thí nghiệm** | Thu thập dữ liệu để trả lời từng nhóm câu hỏi trên bảng |
+| Putting the Pieces Together Routine | **Bước 4 — Xây dựng mô hình** | Ghép các mảnh phát hiện rời rạc thành một lời giải thích có cơ chế |
+| Problematizing Routine | **Bước 5 — Thách thức** | Chỉ ra chỗ mô hình hiện tại còn hở, mở ra câu hỏi mới |
+
+*(OpenSciEd còn một routine thứ sáu — **Navigation Routine**, nối các bài học liên tiếp trong cùng một chuỗi. NEO STEM chưa hiện thực hóa routine này vì mỗi hoạt động hiện đứng độc lập, chưa thành chuỗi bài nhiều tiết.)*
+
+### Cái gì là của Việt Nam
+
+**Toàn bộ nội dung 20 hoạt động là biên soạn mới, không phải bản dịch.** Không hiện tượng nào trong NEO STEM lấy từ một unit của OpenSciEd. Các hiện tượng neo được chọn từ đời sống Việt Nam:
+
+sương mù Đà Lạt · ruộng muối Ninh Thuận · rừng ngập mặn Cần Giờ · nồi cơm điện · ao cá · cổng sắt gỉ trong hẻm · chai nước gõ thành nhạc · sáo trúc · đàn đá và cồng chiêng · bóng bay lễ hội · kem ốc quế ngày nắng
+
+Phần bản địa hóa không dừng ở việc đổi bối cảnh:
+
+- **Ánh xạ sang Chương trình GDPT 2018** (Thông tư 32/2018/TT-BGDĐT) — môn Khoa học lớp 4-5 và Khoa học tự nhiên lớp 6-9. OpenSciEd bám chuẩn NGSS của Mỹ, hai hệ thống không trùng nhau về thứ tự và độ sâu, nên mỗi hoạt động phải đối chiếu lại yêu cầu cần đạt của Việt Nam.
+- **Thí nghiệm chọn theo vật liệu sẵn có** — ly nước đá, cần tây, đinh sắt, chai thủy tinh, đĩa CD. Không cần phòng lab.
+- **Liên hệ văn hóa** — "lúa chín cúi đầu", nhạc cụ dân tộc, nghề làm muối, thích ứng xâm nhập mặn ở ĐBSCL.
+- **Giao diện và toàn bộ nội dung bằng tiếng Việt**, tối ưu cho màn hình cảm ứng của máy NEO One.
+
+### Bản quyền
+
+Tài liệu của OpenSciEd phát hành theo giấy phép Creative Commons:
+
+- **Trung học cơ sở (Middle School): CC BY 4.0**
+- **Tiểu học và Trung học phổ thông: CC BY-NC 4.0** (phi thương mại)
+
+Giấy phép cho phép sử dụng lại, chỉnh sửa, phối lại và phân phối, với điều kiện **ghi công đúng cách**, dẫn liên kết tới giấy phép, và nói rõ có thay đổi hay không.
+
+**Vì NEO STEM chỉ áp dụng khung phương pháp chứ không sao chép nội dung unit nào**, đây không phải là tác phẩm phái sinh theo nghĩa của giấy phép. Dù vậy, việc ghi công vẫn nên làm — vừa đúng tinh thần tài nguyên giáo dục mở, vừa để giáo viên biết đường tìm tới nguồn gốc:
+
+> Phương pháp dạy học của NEO STEM phỏng theo mô hình của **OpenSciEd** (<https://www.openscied.org>), phát hành theo giấy phép Creative Commons CC BY 4.0 (cấp THCS) và CC BY-NC 4.0 (cấp Tiểu học và THPT). Nội dung 20 hoạt động trong NEO STEM là biên soạn mới cho bối cảnh Việt Nam, không phải bản dịch tài liệu của OpenSciEd. OpenSciEd không thẩm định và không bảo trợ cho NEO STEM.
+
+Câu cuối là bắt buộc về mặt pháp lý: giấy phép CC yêu cầu **không được để người đọc hiểu nhầm rằng bên giữ bản quyền bảo trợ cho sản phẩm của mình**.
+
+⚠️ **Việc cần làm nếu NEO STEM đi theo hướng thương mại** (bán kèm máy NEO One, bán bản quyền cho trường): phần cấp Tiểu học và THPT của OpenSciEd mang giấy phép **NC — phi thương mại**. Chỉ dùng khung phương pháp thì không vướng, nhưng nếu sau này có lấy trực tiếp nội dung unit nào của OpenSciEd thì phải xin *License for Commercial Use of Curriculum Materials*. Nên chốt điểm này với người phụ trách sản phẩm trước khi mở rộng.
+
+### Storyline — tư tưởng cốt lõi mượn được, và chỗ NEO STEM chưa đạt
+
+Thứ đáng giá nhất lấy từ OpenSciEd không phải năm cái routine, mà là khái niệm **storyline**: chuỗi bài học phải **mạch lạc theo góc nhìn học sinh**, mỗi bước tiếp theo trả lời một câu hỏi mà chính các em vừa đặt ra. Cách dạy truyền thống sắp bài theo trật tự mà *chuyên gia* thấy hợp lý — trật tự đó chỉ mạch lạc với người đã hiểu môn học rồi.
+
+**NEO STEM hiện chưa có storyline.** 20 hoạt động đứng độc lập; học xong một bài, học sinh quay về màn hình chọn bài. Đúng như đã nêu ở mục ánh xạ routine: cái duy nhất chưa hiện thực hóa là **Navigation Routine** — routine giữ cho mạch chuyện không đứt. NEO STEM đang có 20 mở đầu truyện hay, chưa có cuốn truyện nào.
+
+Đây là hướng phát triển lớn nhất còn lại, lớn hơn cả việc bổ sung hoạt động cho lớp 8-9. Bốn mạch chuyện có thể ghép ngay từ bộ hoạt động hiện tại, cùng điều kiện kỹ thuật cần thêm, nằm ở [`TRIET_LY_NEO_STEM.md`](TRIET_LY_NEO_STEM.md) mục 1.4.
+
+### Phần NEO STEM mở rộng: thí nghiệm mô phỏng
+
+OpenSciEd thiết kế cho lớp học có bộ dụng cụ đi kèm. NEO STEM chạy trên máy đặt ở nhà, thư viện, điểm trường vùng xa — nên bước 3 là **mô phỏng tương tác**. Đây là phần NEO STEM tự thêm, không có trong OpenSciEd.
+
+Cái được: học sinh thấy quy luật trong vài phút, và thấy được cả thứ không làm nổi ở nhà (30 ngày gỉ sét, pha Mặt Trăng suốt một tháng).
+
+Cái mất: **số liệu do người viết phần mềm đặt ra** — hiểu sai thì học sinh học điều sai với đầy đủ vẻ ngoài của một phép đo khoa học. Toàn bộ 5 lỗi trong báo cáo này đều là hệ quả của rủi ro đó. Ba kỷ luật đi kèm phần mở rộng này: xem [`TRIET_LY_NEO_STEM.md`](TRIET_LY_NEO_STEM.md) mục 4.
+
+### Hai nguồn tư tưởng còn lại
+
+Tài liệu nguồn `20_cau_hoi_openscied_gdpt2018.docx` nêu rõ NEO STEM đứng trên ba chân, OpenSciEd chỉ là một:
+
+- **Seymour Papert** — học bằng cách kiến tạo, "microworld" cho phép thử sai an toàn. Thấy rõ nhất ở bước 3 và bước 4: học sinh chỉnh thanh trượt, quan sát quy luật, rồi tự ghép mô hình thay vì được giảng.
+- **Tư tưởng Hồ Chí Minh về giáo dục quần chúng** — "học đi đôi với hành", xuất phát từ đời sống thật của nhân dân, ai cũng tham gia được với chi phí thấp.
+- **OpenSciEd** — khung quy trình lên lớp lấy câu hỏi của học sinh làm trung tâm.
+
+## 6. Lưu ý về nguồn đối chiếu
 
 Ánh xạ trong tài liệu này dựa trên Chương trình GDPT 2018 (Thông tư 32/2018/TT-BGDĐT) và các bộ SGK hiện hành (Kết nối tri thức, Chân trời sáng tạo, Cánh diều). Vì thứ tự bài giữa ba bộ sách có khác nhau đôi chút, **tên chủ đề** được dùng làm mốc thay cho số bài. Trước khi in tài liệu phát cho học sinh, nên đối chiếu lần cuối với bộ sách mà trường đang dùng.

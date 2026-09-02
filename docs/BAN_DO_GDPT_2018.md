@@ -3,6 +3,8 @@
 Tài liệu dành cho **giáo viên, phụ huynh và người biên soạn nội dung**.
 Chuẩn đối chiếu: Thông tư 32/2018/TT-BGDĐT — môn **Khoa học** (lớp 4-5) và **Khoa học tự nhiên** (lớp 6-9).
 
+> **Về nguồn gốc phương pháp.** Quy trình 5 bước của NEO STEM phỏng theo mô hình dạy học của **OpenSciEd** (<https://www.openscied.org>) — Hiện tượng Neo, Bảng câu hỏi dẫn dắt, Điều tra, Ghép mảnh, Đặt vấn đề mới. OpenSciEd bám chuẩn NGSS của Mỹ; **bảng ánh xạ dưới đây là công việc bản địa hóa**, đối chiếu lại từng hoạt động với yêu cầu cần đạt của Việt Nam. Nội dung 20 hiện tượng là biên soạn mới, không phải bản dịch. Chi tiết bản quyền: xem mục 5 trong `RA_SOAT_NOI_DUNG_K12.md`.
+
 Cách đọc bảng:
 
 - **Lớp chính** — lớp mà nội dung này chính thức nằm trong chương trình. Học sinh lớp đó dùng hoạt động để **học và ôn bài trên lớp**.
