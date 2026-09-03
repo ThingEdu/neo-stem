@@ -194,10 +194,78 @@ Item {
 
             Text {
                 width: parent.width
-                text: qsTr("NEO STEM v1.0\nPhần mềm giáo dục STEM cho trẻ em Việt Nam\nDựa trên phương pháp OpenSciEd\n\nCộng đồng Bình Dân Học STEM & Robot")
+                text: qsTr("NEO STEM v1.0 — Phần mềm giáo dục khoa học cho học sinh Việt Nam, lớp 4-9.\n" +
+                           "Bám Chương trình GDPT 2018 (Thông tư 32/2018/TT-BGDĐT): môn Khoa học lớp 4-5, " +
+                           "Khoa học tự nhiên lớp 6-9.")
+                font.pixelSize: NeoConstants.fontCaption
+                color: "#555555"
+                wrapMode: Text.WordWrap
+                topPadding: 4
+            }
+
+            Text {
+                text: qsTr("Phương pháp và nguồn gốc")
+                font.pixelSize: NeoConstants.fontCaption
+                font.bold: true
+                color: "#555555"
+                topPadding: 12
+            }
+
+            Text {
+                width: parent.width
+                text: qsTr("Quy trình 5 bước của NEO STEM phỏng theo mô hình dạy học của OpenSciEd " +
+                           "(openscied.org) — hiện tượng neo, bảng câu hỏi dẫn dắt, điều tra, ghép mảnh, " +
+                           "đặt vấn đề mới.\n\n" +
+                           "Tư tưởng trung tâm mượn từ OpenSciEd là STORYLINE: bài học phải mạch lạc từ " +
+                           "góc nhìn của học sinh, mỗi bước tiếp theo được thúc đẩy bởi chính câu hỏi các " +
+                           "em vừa đặt ra — chứ không phải theo trật tự mà người lớn thấy là hợp lý.\n\n" +
+                           "NEO STEM mở rộng thêm phần thí nghiệm mô phỏng để học sinh thấy nhanh quy luật " +
+                           "khi chưa có điều kiện làm thật. Mô phỏng là bước đệm, không thay được phép đo " +
+                           "thật — mỗi hoạt động đều gợi ý cách làm lại bằng vật liệu sẵn có.")
+                font.pixelSize: NeoConstants.fontSmall
+                color: "#666666"
+                wrapMode: Text.WordWrap
+            }
+
+            Text {
+                width: parent.width
+                text: qsTr("Tài liệu của OpenSciEd phát hành theo giấy phép Creative Commons CC BY 4.0 " +
+                           "(cấp THCS) và CC BY-NC 4.0 (cấp Tiểu học và THPT). 20 hiện tượng trong ứng dụng " +
+                           "này là biên soạn mới cho bối cảnh Việt Nam, không phải bản dịch tài liệu của " +
+                           "OpenSciEd. OpenSciEd không thẩm định và không bảo trợ cho NEO STEM.")
                 font.pixelSize: NeoConstants.fontSmall
                 color: "#888888"
                 wrapMode: Text.WordWrap
+                topPadding: 8
+            }
+
+            Text {
+                text: qsTr("Giấy phép")
+                font.pixelSize: NeoConstants.fontCaption
+                font.bold: true
+                color: "#555555"
+                topPadding: 12
+            }
+
+            Text {
+                width: parent.width
+                text: qsTr("NEO STEM là phần mềm MÃ NGUỒN MỞ, PHI THƯƠNG MẠI, mở miễn phí cho học sinh.\n\n" +
+                           "Mã nguồn theo giấy phép MIT. Nội dung 20 hoạt động và tài liệu theo giấy phép " +
+                           "Creative Commons CC BY-SA 4.0 — ai chỉnh sửa cũng phải mở lại cho học sinh khác dùng.\n\n" +
+                           "Mã nguồn: github.com/ThingEdu/neo-stem")
+                font.pixelSize: NeoConstants.fontSmall
+                color: "#666666"
+                wrapMode: Text.WordWrap
+            }
+
+            Text {
+                width: parent.width
+                text: qsTr("Bản quyền © 2026 Cộng đồng Bình Dân Học STEM & Robot · ThingEdu")
+                font.pixelSize: NeoConstants.fontSmall
+                color: "#888888"
+                wrapMode: Text.WordWrap
+                topPadding: 8
+                bottomPadding: 8
             }
         }
     }

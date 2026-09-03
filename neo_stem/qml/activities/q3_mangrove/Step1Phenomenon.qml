@@ -6,7 +6,7 @@ PhenomenonViewer {
     description: qsTr("Rừng ngập mặn Cần Giờ, TP.HCM. Cây đước mọc khỏe trong nước mặn, nhưng cây thường lại héo. Tại sao?")
 
     hotspots: [
-        { x: 0.3, y: 0.3, label: qsTr("Cây đước khỏe mạnh"), detail: qsTr("Cây đước có hệ rễ đặc biệt và cơ chế lọc muối. Rễ cọc bám sâu, rễ thở nhô lên mặt nước. Tế bào rễ có thể lọc 90% muối khi hấp thụ nước.") },
+        { x: 0.3, y: 0.3, label: qsTr("Cây đước khỏe mạnh"), detail: qsTr("Cây đước (Rhizophora) dùng chiến lược CHẶN MUỐI NGAY TẠI RỄ: màng tế bào rễ giữ lại 90-95% muối, chỉ cho nước sạch đi vào. Lá đước KHÔNG có tuyến tiết muối — sờ lá không thấy mặn. Chút muối lọt vào được dồn dần vào lá già rồi cây rụng lá đó đi.\n\nMột chiến lược khác là của cây MẮM và cây SÚ (Avicennia, Aegiceras): chúng hút cả muối vào rồi ĐẨY RA QUA TUYẾN MUỐI TRÊN LÁ — sờ lá mắm thấy mặn, phơi nắng thấy tinh thể muối trắng.") },
         { x: 0.7, y: 0.3, label: qsTr("Cây thường héo úa"), detail: qsTr("Cây bình thường sẽ héo và chết trong nước mặn. Nồng độ muối bên ngoài cao hơn bên trong tế bào, nước bị rút ra ngoài (thẩm thấu ngược).") },
         { x: 0.5, y: 0.7, label: qsTr("Nước mặn"), detail: qsTr("Nước biển có nồng độ muối khoảng 3.5%. Muối NaCl tan trong nước tạo dung dịch có áp suất thẩm thấu cao, ảnh hưởng trực tiếp đến tế bào thực vật.") }
     ]

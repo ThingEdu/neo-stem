@@ -8,7 +8,7 @@ PhenomenonViewer {
     hotspots: [
         { x: 0.5, y: 0.65, label: qsTr("Bụng đom đóm"), detail: qsTr("Bụng (phía dưới) của đom đóm có cơ quan phát sáng đặc biệt. Bên trong chứa chất luciferin và enzyme luciferase. Khi luciferin phản ứng với oxy dưới tác động của luciferase, ánh sáng được tạo ra. Đây là hiện tượng phát quang sinh học (bioluminescence).") },
         { x: 0.3, y: 0.45, label: qsTr("Nhịp nhấp nháy"), detail: qsTr("Đom đóm nhấp nháy theo nhịp điệu đặc biệt — mỗi loài có kiểu nhấp nháy riêng. Con đực nhấp nháy để gọi bạn, con cái nhấp nháy để đáp lại. Nhịp nháy được điều khiển bởi hệ thần kinh kiểm soát lượng oxy vào cơ quan phát sáng.") },
-        { x: 0.7, y: 0.55, label: qsTr("Không nóng"), detail: qsTr("Ánh sáng đom đóm là 'ánh sáng lạnh' — gần 100% năng lượng chuyển thành ánh sáng, gần như không tỏa nhiệt. Bóng đèn thì ngược lại: chỉ 10% là ánh sáng, 90% thành nhiệt. Vì vậy bụng đom đóm không bị nóng dù sáng rực.") }
+        { x: 0.7, y: 0.55, label: qsTr("Không nóng"), detail: qsTr("Ánh sáng đom đóm là 'ánh sáng lạnh' — chỉ khoảng 1% năng lượng thoát ra thành nhiệt, nên bụng đom đóm không nóng dù đang sáng rực. Bóng đèn sợi đốt thì ngược hẳn: khoảng 95% năng lượng thành nhiệt, chỉ ~5% thành ánh sáng. Lưu ý: 'không tỏa nhiệt' không có nghĩa là 'hiệu suất 100%' — phản ứng của đom đóm biến khoảng 40% năng lượng thành ánh sáng, phần còn lại nằm trong sản phẩm hóa học.") }
     ]
 
     sceneComponent: Component {

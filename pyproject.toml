@@ -7,6 +7,8 @@ name = "neo-stem"
 version = "1.0.3"
 description = "NEO STEM - Ung dung giao duc STEM tuong tac cho hoc sinh Viet Nam (Lop 3-9)"
 readme = "README.md"
+# Mã nguồn theo MIT. Nội dung giáo dục (docs/ và chuỗi văn bản bài học trong
+# neo_stem/qml/activities/) theo CC BY-SA 4.0 — xem LICENSE-NOI-DUNG.md.
 license = {text = "MIT"}
 requires-python = ">=3.8"
 dependencies = ["PyQt6>=6.5"]

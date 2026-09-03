@@ -1,5 +1,5 @@
-pragma Singleton
 import QtQuick
+pragma Singleton
 
 QtObject {
     // Colors - Primary
@@ -38,21 +38,27 @@ QtObject {
         qsTr("Thách thức")
     ]
 
-    // Difficulty levels
-    readonly property string levelBasic: "basic"       // Lớp 3-5 (Tiểu học)
-    readonly property string levelIntermediate: "intermediate" // Lớp 5-6 (Tiểu học cao - THCS đầu)
-    readonly property string levelAdvanced: "advanced"  // Lớp 6-9 (THCS)
+    // Cấp độ theo Chương trình GDPT 2018 (Thông tư 32/2018/TT-BGDĐT).
+    // Lưu ý: môn Khoa học chỉ bắt đầu từ LỚP 4. Lớp 1-3 học Tự nhiên và Xã hội,
+    // chương trình đó không có bay hơi, ngưng tụ, tần số hay mạch điện — nên ứng dụng này là LỚP 4-9.
+    readonly property string levelBasic: "basic"                // Khoa học 4-5 (Tiểu học)
+    readonly property string levelIntermediate: "intermediate"  // KHTN 6-7 (THCS)
+    readonly property string levelAdvanced: "advanced"          // KHTN 8-9 (THCS)
+    readonly property string levelEnrichment: "enrichment"      // Ngoài yêu cầu cần đạt — dùng cho ngoại khóa
 
+    // Nhãn hiển thị = TÊN MÔN, ghép với gradeCore thành "Khoa học 4", "KHTN 9"...
     readonly property var levelLabels: ({
-        "basic": qsTr("Cơ bản"),
-        "intermediate": qsTr("Nâng cao"),
-        "advanced": qsTr("THCS")
+        "basic": qsTr("Khoa học"),
+        "intermediate": qsTr("KHTN"),
+        "advanced": qsTr("KHTN"),
+        "enrichment": qsTr("Ngoại khóa")
     })
 
     readonly property var levelColors: ({
         "basic": "#4CAF50",
         "intermediate": "#FF9800",
-        "advanced": "#E91E63"
+        "advanced": "#E91E63",
+        "enrichment": "#7E57C2"
     })
 
     // Question data
@@ -63,7 +69,8 @@ QtObject {
             question: qsTr("Tại sao nắp nồi cơm điện rung và có hơi nước?"),
             topic: qsTr("Chuyển thể, bay hơi"),
             icon: "🍚",
-            level: levelBasic, gradeRange: "4-5",
+            level: levelBasic, gradeCore: 4, gradeRange: "4",
+            curriculumTopic: qsTr("Khoa học 4 — Nước: sự chuyển thể"),
             mapX: 0.5, mapY: 0.6
         },
         {
@@ -72,7 +79,8 @@ QtObject {
             question: qsTr("Tại sao Đà Lạt sáng sớm có sương mù, trưa tan hết?"),
             topic: qsTr("Chu trình nước, ngưng tụ"),
             icon: "🌫",
-            level: levelBasic, gradeRange: "4-5",
+            level: levelBasic, gradeCore: 4, gradeRange: "4",
+            curriculumTopic: qsTr("Khoa học 4 — Nước: chuyển thể, vòng tuần hoàn của nước"),
             mapX: 0.6, mapY: 0.45
         },
         {
@@ -81,7 +89,8 @@ QtObject {
             question: qsTr("Tại sao cây bần/đước sống được trong nước mặn?"),
             topic: qsTr("Tế bào, thẩm thấu"),
             icon: "🌳",
-            level: levelAdvanced, gradeRange: "8-9",
+            level: levelIntermediate, gradeCore: 7, gradeRange: "7",
+            curriculumTopic: qsTr("KHTN 7 — Trao đổi nước và chất khoáng ở thực vật"),
             mapX: 0.55, mapY: 0.7
         },
         {
@@ -90,7 +99,8 @@ QtObject {
             question: qsTr("Tại sao bên ngoài ly đá có giọt nước bám?"),
             topic: qsTr("Ngưng tụ, điểm sương"),
             icon: "🧊",
-            level: levelBasic, gradeRange: "3-4",
+            level: levelBasic, gradeCore: 4, gradeRange: "4",
+            curriculumTopic: qsTr("Khoa học 4 — Nước: sự ngưng tụ"),
             mapX: 0.4, mapY: 0.55
         },
         {
@@ -99,7 +109,8 @@ QtObject {
             question: qsTr("Tại sao muối biển lấy được bằng cách phơi nắng?"),
             topic: qsTr("Bay hơi, tách hỗn hợp"),
             icon: "🧂",
-            level: levelBasic, gradeRange: "4-5",
+            level: levelBasic, gradeCore: 4, gradeRange: "4",
+            curriculumTopic: qsTr("Khoa học 4 — Sự bay hơi (nghề làm muối); mở rộng KHTN 6 — tách chất"),
             mapX: 0.65, mapY: 0.58
         },
         {
@@ -108,7 +119,8 @@ QtObject {
             question: qsTr("Tại sao cầu vồng xuất hiện sau cơn mưa?"),
             topic: qsTr("Khúc xạ ánh sáng, quang phổ"),
             icon: "🌈",
-            level: levelAdvanced, gradeRange: "6-7",
+            level: levelAdvanced, gradeCore: 9, gradeRange: "9",
+            curriculumTopic: qsTr("KHTN 9 — Ánh sáng: tán sắc ánh sáng qua lăng kính"),
             mapX: 0.35, mapY: 0.4
         },
         {
@@ -117,7 +129,8 @@ QtObject {
             question: qsTr("Tại sao mặt trăng thay đổi hình dạng mỗi đêm?"),
             topic: qsTr("Pha mặt trăng, phản xạ"),
             icon: "🌙",
-            level: levelBasic, gradeRange: "4-5",
+            level: levelIntermediate, gradeCore: 6, gradeRange: "6",
+            curriculumTopic: qsTr("KHTN 6 — Trái Đất và bầu trời: các hình dạng nhìn thấy của Mặt Trăng"),
             mapX: 0.7, mapY: 0.35
         },
         {
@@ -126,7 +139,8 @@ QtObject {
             question: qsTr("Tại sao đập trống phát ra tiếng vang?"),
             topic: qsTr("Sóng âm, rung động"),
             icon: "🥁",
-            level: levelBasic, gradeRange: "4-5",
+            level: levelBasic, gradeCore: 4, gradeRange: "4",
+            curriculumTopic: qsTr("Khoa học 4 — Âm thanh: nguồn âm, sự truyền âm"),
             mapX: 0.45, mapY: 0.75
         },
         {
@@ -135,7 +149,8 @@ QtObject {
             question: qsTr("Tại sao quạt điện quay khi cắm điện?"),
             topic: qsTr("Mạch điện, chuyển hóa năng lượng"),
             icon: "🔌",
-            level: levelBasic, gradeRange: "4-5",
+            level: levelBasic, gradeCore: 5, gradeRange: "5",
+            curriculumTopic: qsTr("Khoa học 5 — Mạch điện đơn giản, vật dẫn điện và vật cách điện"),
             mapX: 0.3, mapY: 0.55
         },
         {
@@ -144,7 +159,8 @@ QtObject {
             question: qsTr("Tại sao nam châm hút đinh sắt nhưng không hút nhôm?"),
             topic: qsTr("Từ tính, vật liệu sắt từ"),
             icon: "🧲",
-            level: levelIntermediate, gradeRange: "5-6",
+            level: levelIntermediate, gradeCore: 7, gradeRange: "7",
+            curriculumTopic: qsTr("KHTN 7 — Từ: nam châm, từ trường, la bàn"),
             mapX: 0.75, mapY: 0.5
         },
         {
@@ -153,7 +169,8 @@ QtObject {
             question: qsTr("Tại sao xe đạp đi nhanh hơn khi xuống dốc?"),
             topic: qsTr("Trọng lực, thế năng/động năng"),
             icon: "🚲",
-            level: levelAdvanced, gradeRange: "7",
+            level: levelAdvanced, gradeCore: 9, gradeRange: "9",
+            curriculumTopic: qsTr("KHTN 9 — Năng lượng cơ học: động năng, thế năng, cơ năng"),
             mapX: 0.2, mapY: 0.65
         },
         {
@@ -162,7 +179,8 @@ QtObject {
             question: qsTr("Tại sao lá cây xanh nhưng hoa có nhiều màu?"),
             topic: qsTr("Quang hợp, sắc tố"),
             icon: "🌿",
-            level: levelIntermediate, gradeRange: "5-6",
+            level: levelIntermediate, gradeCore: 7, gradeRange: "7",
+            curriculumTopic: qsTr("KHTN 7 — Quang hợp ở thực vật"),
             mapX: 0.6, mapY: 0.3
         },
         {
@@ -171,7 +189,8 @@ QtObject {
             question: qsTr("Tại sao bóng đèn phát sáng khi bật công tắc?"),
             topic: qsTr("Mạch điện, năng lượng điện→quang"),
             icon: "💡",
-            level: levelBasic, gradeRange: "4-5",
+            level: levelBasic, gradeCore: 5, gradeRange: "5",
+            curriculumTopic: qsTr("Khoa học 5 — Năng lượng điện, sử dụng an toàn và tiết kiệm điện"),
             mapX: 0.8, mapY: 0.65
         },
         {
@@ -180,7 +199,8 @@ QtObject {
             question: qsTr("Tại sao sắt để ngoài mưa bị rỉ sét?"),
             topic: qsTr("Oxy hóa, biến đổi hóa học"),
             icon: "🔩",
-            level: levelAdvanced, gradeRange: "7-8",
+            level: levelAdvanced, gradeCore: 9, gradeRange: "9",
+            curriculumTopic: qsTr("KHTN 9 — Kim loại: ăn mòn và chống ăn mòn; nhập môn Khoa học 5"),
             mapX: 0.25, mapY: 0.45
         },
         {
@@ -189,7 +209,8 @@ QtObject {
             question: qsTr("Tại sao cá sống được dưới nước?"),
             topic: qsTr("Hô hấp, mang cá, oxy hòa tan"),
             icon: "🐟",
-            level: levelBasic, gradeRange: "4-5",
+            level: levelIntermediate, gradeCore: 7, gradeRange: "7",
+            curriculumTopic: qsTr("KHTN 7 — Trao đổi khí ở sinh vật"),
             mapX: 0.5, mapY: 0.8
         },
         {
@@ -198,7 +219,8 @@ QtObject {
             question: qsTr("Tại sao mở chai nước ngọt có ga bọt phun ra?"),
             topic: qsTr("Độ tan khí, áp suất"),
             icon: "🥤",
-            level: levelIntermediate, gradeRange: "5-6",
+            level: levelIntermediate, gradeCore: 6, gradeRange: "6",
+            curriculumTopic: qsTr("KHTN 6 — Hỗn hợp, dung dịch, ảnh hưởng của nhiệt độ tới độ tan"),
             mapX: 0.4, mapY: 0.35
         },
         {
@@ -207,7 +229,8 @@ QtObject {
             question: qsTr("Tại sao kem tan nhanh ngoài nắng?"),
             topic: qsTr("Nóng chảy, truyền nhiệt"),
             icon: "🍦",
-            level: levelBasic, gradeRange: "3-4",
+            level: levelBasic, gradeCore: 4, gradeRange: "4",
+            curriculumTopic: qsTr("Khoa học 4 — Nhiệt: sự truyền nhiệt, vật cách nhiệt"),
             mapX: 0.55, mapY: 0.5
         },
         {
@@ -216,7 +239,8 @@ QtObject {
             question: qsTr("Tại sao bóng bay heli bay lên trời?"),
             topic: qsTr("Mật độ, lực đẩy Archimedes"),
             icon: "🎈",
-            level: levelAdvanced, gradeRange: "6-8",
+            level: levelAdvanced, gradeCore: 8, gradeRange: "8",
+            curriculumTopic: qsTr("KHTN 8 — Khối lượng riêng, áp suất, lực đẩy Archimedes"),
             mapX: 0.7, mapY: 0.75
         },
         {
@@ -225,16 +249,18 @@ QtObject {
             question: qsTr("Tại sao đom đóm phát sáng trong đêm?"),
             topic: qsTr("Phát quang sinh học, hóa năng→quang"),
             icon: "✨",
-            level: levelIntermediate, gradeRange: "5-6",
+            level: levelEnrichment, gradeCore: 0, gradeRange: "—",
+            curriculumTopic: qsTr("Ngoài yêu cầu cần đạt — dùng cho ngoại khóa, câu lạc bộ"),
             mapX: 0.35, mapY: 0.7
         },
         {
             id: 20,
             title: qsTr("Chai nước xylophone"),
-            question: qsTr("Tại sao gõ chai nước khác mực nghe khác nhau?"),
-            topic: qsTr("Tần số âm, cột không khí"),
+            question: qsTr("Tại sao gõ và thổi cùng một chai nước cho kết quả ngược nhau?"),
+            topic: qsTr("Tần số âm: khối lượng rung và cột khí"),
             icon: "🎵",
-            level: levelBasic, gradeRange: "4-5",
+            level: levelIntermediate, gradeCore: 7, gradeRange: "7",
+            curriculumTopic: qsTr("KHTN 7 — Biên độ, tần số, độ to và độ cao của âm"),
             mapX: 0.8, mapY: 0.4
         }
     ]
@@ -310,11 +336,12 @@ QtObject {
     })
 
     // Question groups by knowledge domain
+    // "grades" = dải lớp theo GDPT 2018 của các hoạt động trong nhóm (không phải tuổi).
     readonly property var questionGroups: [
-        { name: qsTr("Nước & Nhiệt"), icon: "💧", color: "#1E88E5", age: "6-10", questionIds: [1,2,4,5,17] },
-        { name: qsTr("Ánh sáng & Âm thanh"), icon: "🔆", color: "#FF8F00", age: "8-13", questionIds: [6,7,8,13,20] },
-        { name: qsTr("Lực & Điện từ"), icon: "⚡", color: "#E53935", age: "8-15", questionIds: [9,10,11,18] },
-        { name: qsTr("Sự sống & Hóa học"), icon: "🌱", color: "#43A047", age: "8-15", questionIds: [3,12,14,15,16,19] }
+        { name: qsTr("Nước & Nhiệt"), icon: "💧", color: "#1E88E5", grades: "4", questionIds: [1,2,4,5,17] },
+        { name: qsTr("Ánh sáng & Âm thanh"), icon: "🔆", color: "#FF8F00", grades: "4-9", questionIds: [6,7,8,13,20] },
+        { name: qsTr("Lực & Điện từ"), icon: "⚡", color: "#E53935", grades: "5-9", questionIds: [9,10,11,18] },
+        { name: qsTr("Sự sống & Hóa học"), icon: "🌱", color: "#43A047", grades: "6-9", questionIds: [3,12,14,15,16,19] }
     ]
 
     function getQuestionById(id) {

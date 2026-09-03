@@ -1,6 +1,6 @@
 # NEO STEM
 
-Ứng dụng giáo dục STEM tương tác cho học sinh Việt Nam (Lớp 3-9), học từ những hiện tượng đời sống quen thuộc theo cách trực quan, chạm để khám phá và có thể dùng cả khi không có Internet.
+Ứng dụng giáo dục STEM tương tác cho học sinh Việt Nam (**Lớp 4-9**), bám Chương trình GDPT 2018, học từ những hiện tượng đời sống quen thuộc theo cách trực quan, chạm để khám phá và có thể dùng cả khi không có Internet.
 
 ## Ứng dụng này là gì?
 
@@ -10,15 +10,21 @@ Mỗi hoạt động giúp học sinh quan sát, đặt câu hỏi, thử nghi�
 
 ## Dành cho ai
 
-- Học sinh Việt Nam lớp 3-9 (8-15 tuổi)
+- Học sinh Việt Nam **lớp 4-9** — môn Khoa học (lớp 4-5) và Khoa học tự nhiên (lớp 6-9)
 - Phụ huynh và giáo viên muốn có nội dung STEM dễ dùng, có lộ trình rõ ràng
 - Môi trường học tại nhà, lớp học, thư viện hoặc trung tâm
 
 ## Trải nghiệm học tập
 
-- 3 cấp độ phù hợp theo khối lớp (cơ bản, trung cấp, nâng cao)
+- 3 cấp độ theo môn học: **Khoa học 4-5** · **KHTN 6-7** · **KHTN 8-9**, mỗi hoạt động ghi rõ lớp theo GDPT 2018
 - Mỗi bước được chấm sao (1-3 sao), tối đa 300 sao cho toàn bộ nội dung
 - 29 huy hiệu khích lệ tiến bộ và sự kiên trì
+
+
+> **Vì sao là lớp 4 chứ không phải lớp 3.** Chương trình GDPT 2018 chỉ có môn Khoa học **từ lớp 4**;
+> lớp 1-3 học Tự nhiên và Xã hội, chương trình đó không có bay hơi, ngưng tụ, tần số hay mạch điện.
+> Ánh xạ đầy đủ 20 hoạt động sang môn, lớp, mạch nội dung và yêu cầu cần đạt:
+> [`docs/BAN_DO_GDPT_2018.md`](docs/BAN_DO_GDPT_2018.md).
 
 ## Nội dung nổi bật
 
@@ -81,6 +87,47 @@ neo-stem
 - Windows 10+, macOS 13+, Linux (Ubuntu 22.04+ / Debian 12+)
 - Python 3.8+ và PyQt6 6.5+
 
-## License
+## Ghi công
 
-MIT - Bình Dân Học STEM & Robot
+Quy trình 5 bước của NEO STEM phỏng theo mô hình dạy học của **OpenSciEd**
+(<https://www.openscied.org>) — Anchoring Phenomenon, Driving Question Board,
+Investigation, Putting the Pieces Together, Problematizing. Tài liệu của
+OpenSciEd phát hành theo giấy phép Creative Commons **CC BY 4.0** (cấp THCS) và
+**CC BY-NC 4.0** (cấp Tiểu học và THPT).
+
+Nội dung 20 hoạt động trong NEO STEM là **biên soạn mới cho bối cảnh Việt Nam,
+không phải bản dịch** tài liệu của OpenSciEd, và được ánh xạ lại theo Chương
+trình GDPT 2018 thay vì chuẩn NGSS của Mỹ. OpenSciEd không thẩm định và không
+bảo trợ cho NEO STEM.
+
+Tư tưởng **storyline** mượn từ OpenSciEd, phần NEO STEM mở rộng thêm (thí nghiệm mô
+phỏng) và lưu ý bản quyền khi dùng cho mục đích thương mại:
+[`docs/TRIET_LY_NEO_STEM.md`](docs/TRIET_LY_NEO_STEM.md).
+
+## Giấy phép
+
+NEO STEM là dự án **mã nguồn mở, phi thương mại, mở miễn phí cho học sinh**.
+Hai loại tài sản dùng hai giấy phép khác nhau:
+
+| | Giấy phép | Gồm những gì |
+|---|---|---|
+| **Mã nguồn** | [MIT](LICENSE) | Mã Python trong `neo_stem/`, cấu trúc các tệp QML, kịch bản build và đóng gói |
+| **Nội dung giáo dục** | [CC BY-SA 4.0](LICENSE-NOI-DUNG.md) | Nội dung 20 hoạt động, tài liệu trong `docs/`, hình minh hoạ do dự án tạo |
+
+Chúng tôi chọn **Chia sẻ tương tự (ShareAlike)** thay vì **Phi thương mại (NonCommercial)**
+vì điều dự án muốn ngăn không phải là "có người kiếm tiền", mà là **có người đóng
+kín nội dung lại**. Ai chỉnh sửa cũng phải mở lại cho học sinh khác dùng. Phi thương
+mại là lập trường của dự án — chúng tôi không bán NEO STEM — chứ không cần thành một
+điều cấm áp lên người khác. Lý do đầy đủ: [LICENSE-NOI-DUNG.md](LICENSE-NOI-DUNG.md).
+
+Bản quyền © 2026 Bình Dân Học STEM & Robot · ThingEdu
+
+## Tài liệu
+
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) - Kiến trúc ứng dụng
+- [docs/publishing.md](docs/publishing.md) - Quy trình phát hành
+- [docs/TRIET_LY_NEO_STEM.md](docs/TRIET_LY_NEO_STEM.md) - Triết lý: OpenSciEd & storyline, Papert, và phần NEO STEM mở rộng
+- [docs/BAN_DO_GDPT_2018.md](docs/BAN_DO_GDPT_2018.md) - Bản đồ 20 hoạt động theo môn, lớp, mạch nội dung, yêu cầu cần đạt
+- [docs/RA_SOAT_NOI_DUNG_K12.md](docs/RA_SOAT_NOI_DUNG_K12.md) - Báo cáo rà soát độ chính xác nội dung
+- [docs/SO_TAY_HOC_SINH_TIEU_HOC.md](docs/SO_TAY_HOC_SINH_TIEU_HOC.md) - Sổ tay học sinh lớp 4-5
+- [docs/SO_TAY_HOC_SINH_THCS.md](docs/SO_TAY_HOC_SINH_THCS.md) - Sổ tay học sinh lớp 6-9

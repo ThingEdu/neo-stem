@@ -8,7 +8,7 @@ PhenomenonViewer {
     hotspots: [
         { x: 0.5, y: 0.3, label: qsTr("Dây tóc (filament)"), detail: qsTr("Dây tóc tungsten bên trong bóng đèn sợi đốt nóng đến 2500°C khi dòng điện chạy qua. Nhiệt độ cực cao khiến dây tóc phát sáng — hiện tượng gọi là bức xạ nhiệt.") },
         { x: 0.5, y: 0.15, label: qsTr("Ánh sáng"), detail: qsTr("Ánh sáng là dạng năng lượng mắt nhìn thấy được. Đèn sợi đốt phát ánh sáng ấm vàng, trong khi LED phát ánh sáng trắng mát. Ánh sáng lan tỏa khắp phòng theo mọi hướng.") },
-        { x: 0.65, y: 0.45, label: qsTr("Nhiệt"), detail: qsTr("Sờ gần bóng đèn sợi đốt rất nóng! Đến 90% điện năng chuyển thành nhiệt, chỉ 10% thành ánh sáng. Đèn LED ngược lại — mát hơn nhiều vì hiệu suất cao hơn.") }
+        { x: 0.65, y: 0.45, label: qsTr("Nhiệt"), detail: qsTr("Sờ gần bóng đèn sợi đốt rất nóng! Khoảng 95% điện năng thoát ra thành nhiệt, chỉ khoảng 5% thành ánh sáng. Đèn LED mát hơn nhiều vì chuyển được tới ~35% điện năng thành ánh sáng.") }
     ]
 
     sceneComponent: Component {
@@ -55,6 +55,10 @@ PhenomenonViewer {
 
             // Filament inside bulb
             Canvas {
+                id: filamentCanvas
+                // lightOn thuộc về Rectangle cha, nên không thể viết onLightOnChanged ở đây.
+                // Nhân bản thành thuộc tính cục bộ để bắt được tín hiệu thay đổi.
+                property bool lit: lightOn
                 anchors.horizontalCenter: parent.horizontalCenter
                 y: parent.height * 0.25; width: 30; height: 30
                 onPaint: {
@@ -73,7 +77,7 @@ PhenomenonViewer {
                     ctx.lineTo(20, 25)
                     ctx.stroke()
                 }
-                onLightOnChanged: requestPaint()
+                onLitChanged: requestPaint()
             }
 
             // Bulb base (screw cap)

@@ -4,26 +4,30 @@ import NEO_STEM
 
 InvestigationBase {
     title: qsTr("Thí nghiệm: So sánh bóng đèn")
-    instructions: qsTr("Thay đổi loại bóng đèn (sợi đốt / LED) và số pin. Quan sát độ sáng và nhiệt độ. Ghi lại dữ liệu.")
+    instructions: qsTr("Thay đổi loại bóng đèn (sợi đốt / LED) và số pin. Với CÙNG số pin, hãy so độ sáng của hai loại. Ghi lại dữ liệu.")
     requiredDataPoints: 5
-    dataHeaders: [qsTr("Loại đèn"), qsTr("Số pin"), qsTr("Độ sáng"), qsTr("Nhiệt độ")]
+    dataHeaders: [qsTr("Loại đèn"), qsTr("Số pin"), qsTr("Độ sáng"), qsTr("Nhiệt độ vỏ bóng")]
 
     property int bulbType: 0     // 0 = sợi đốt (incandescent), 1 = LED
     property int batteryCount: 1 // 1-3
 
+    // Độ sáng thu được trên cùng một mức điện năng.
+    // Sợi đốt ~5% điện năng thành ánh sáng, LED ~35% → LED sáng hơn khoảng 7 lần.
+    // Thang quy ước 0-100 cho 3 pin: sợi đốt 5*pin, LED 33*pin.
     property real brightness: {
         if (bulbType === 0) {
-            return batteryCount * 25  // incandescent: lower light efficiency
+            return batteryCount * 5    // sợi đốt: ~5% điện năng thành ánh sáng
         } else {
-            return batteryCount * 30  // LED: higher light efficiency
+            return batteryCount * 33   // LED: ~35% điện năng thành ánh sáng
         }
     }
 
+    // Nhiệt độ VỎ BÓNG (không phải dây tóc — dây tóc tungsten lên tới 2500 độ C).
     property real temperature: {
         if (bulbType === 0) {
-            return 30 + batteryCount * 40  // incandescent: gets very hot
+            return 30 + batteryCount * 40  // sợi đốt: vỏ bóng rất nóng
         } else {
-            return 30 + batteryCount * 5   // LED: stays cool
+            return 30 + batteryCount * 5   // LED: vỏ bóng chỉ hơi ấm
         }
     }
 
@@ -70,12 +74,12 @@ InvestigationBase {
                 width: 50; height: 60; radius: 25
                 color: {
                     if (bulbType === 0) {
-                        return brightness > 40 ? "#FFF9C4" : "#FFF3E0"
+                        return brightness > 8 ? "#FFF9C4" : "#FFF3E0"
                     } else {
-                        return brightness > 40 ? "#E3F2FD" : "#ECEFF1"
+                        return brightness > 25 ? "#E3F2FD" : "#ECEFF1"
                     }
                 }
-                opacity: 0.3 + brightness / 100 * 0.7
+                opacity: 0.35 + brightness / 100 * 0.65
                 border.width: 1
                 border.color: bulbType === 0 ? "#FFA000" : "#1565C0"
 
@@ -90,9 +94,9 @@ InvestigationBase {
                     radius: bulbType === 0 ? 1 : 2
                     color: {
                         if (bulbType === 0) {
-                            return brightness > 50 ? "#FF6F00" : "#9E9E9E"
+                            return brightness > 8 ? "#FF6F00" : "#9E9E9E"
                         } else {
-                            return brightness > 50 ? "#2196F3" : "#90A4AE"
+                            return brightness > 25 ? "#2196F3" : "#90A4AE"
                         }
                     }
 
@@ -110,14 +114,14 @@ InvestigationBase {
 
             // Glow effect
             Rectangle {
-                visible: brightness > 20
+                visible: brightness > 8
                 anchors.centerIn: bulbBody
                 width: 90; height: 90; radius: 45
                 color: bulbType === 0 ? "#FFF9C4" : "#E3F2FD"
                 opacity: brightness / 100 * 0.4
 
                 SequentialAnimation on opacity {
-                    running: brightness > 20; loops: Animation.Infinite
+                    running: brightness > 8; loops: Animation.Infinite
                     NumberAnimation { from: 0.15; to: 0.35; duration: 1000 }
                     NumberAnimation { from: 0.35; to: 0.15; duration: 1000 }
                 }
@@ -203,17 +207,20 @@ InvestigationBase {
 
     function recordCurrentData() {
         var typeName = bulbType === 0 ? qsTr("Sợi đốt") : qsTr("LED")
-        var brightLabel = brightness < 40 ? qsTr("Mờ") : (brightness < 70 ? qsTr("Sáng") : qsTr("Rất sáng"))
         var tempLabel = temperature < 50 ? qsTr("Mát") : (temperature < 100 ? qsTr("Ấm") : qsTr("Rất nóng"))
-        addDataPoint([typeName, batteryCount, brightLabel, tempLabel])
+        addDataPoint([typeName, batteryCount, Math.round(brightness) + "%",
+                      Math.round(temperature) + "°C — " + tempLabel])
     }
 
     function getConclusion() {
         if (dataPoints.length >= requiredDataPoints) {
-            return qsTr("Kết luận: Đèn sợi đốt chuyển điện năng thành ÁNH SÁNG + NHIỆT. " +
-                        "Đến 90% năng lượng thành nhiệt (rất nóng), chỉ 10% thành ánh sáng — hiệu suất thấp. " +
-                        "Đèn LED chuyển 90% điện thành ánh sáng, rất ít nhiệt — hiệu suất cao, tiết kiệm điện. " +
-                        "Nhiều pin hơn = điện áp cao hơn = sáng hơn cho cả hai loại!")
+            return qsTr("Kết luận: cùng số pin (cùng lượng điện năng), đèn LED sáng hơn đèn sợi đốt khoảng BẢY LẦN.\n\n" +
+                        "Đèn sợi đốt phải đốt nóng dây tóc lên 2500°C mới phát sáng: khoảng 95% điện năng thoát ra thành NHIỆT " +
+                        "(vỏ bóng rất nóng), chỉ khoảng 5% thành ánh sáng.\n\n" +
+                        "Đèn LED cho electron phát photon trực tiếp, không qua bước đốt nóng: khoảng 35% điện năng thành ÁNH SÁNG, " +
+                        "vỏ bóng chỉ hơi ấm.\n\n" +
+                        "Kiểm chứng ngoài đời: bóng LED 9W ghi trên nhãn là 'tương đương 60W' — tỉ số 60/9 ≈ 7, đúng bằng tỉ số " +
+                        "35% chia 5% mà em vừa đo được.")
         }
         return qsTr("Cần thêm dữ liệu để kết luận.")
     }
